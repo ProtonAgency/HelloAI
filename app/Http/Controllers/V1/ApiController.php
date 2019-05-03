@@ -46,7 +46,6 @@ class ApiController extends \App\Http\Controllers\Controller {
 		]);
 	}
 
-
 	/**
 	 *
 	 * List Your Artifical Intellegence Models
