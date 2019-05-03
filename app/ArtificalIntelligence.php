@@ -6,7 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 class ArtificalIntelligence extends Model
 {
     protected $fillable = [
-    	'user_id', 'export', 'type',
+    	'user_id', 'export', 'type', 'name', 'identifier',
+    ];
+
+    protected $hidden = [
+    	'created_at', 'updated_at', 'user_id', 'export',
     ];
 
     public function user()

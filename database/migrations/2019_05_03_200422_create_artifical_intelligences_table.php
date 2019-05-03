@@ -15,6 +15,11 @@ class CreateArtificalIntelligencesTable extends Migration
     {
         Schema::create('artifical_intelligences', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
+            $table->string('type')->nullable();
+            $table->string('name');
+            $table->binary('export');
+            $table->string('identifier');
             $table->timestamps();
         });
     }
