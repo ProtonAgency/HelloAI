@@ -9,6 +9,12 @@ use App\Analysis\TextAnalysis;
 
 class ApiController extends \App\Http\Controllers\Controller {
 
+	/**
+	 *
+	 * Create Artifical Intellegence Model
+	 *
+	 * @param Request $request
+	 */
 	public function createModel(Request $request)
 	{
 		$request->validate([
@@ -40,6 +46,13 @@ class ApiController extends \App\Http\Controllers\Controller {
 		]);
 	}
 
+
+	/**
+	 *
+	 * List Your Artifical Intellegence Models
+	 *
+	 * @param Request $request
+	 */
 	public function listModels(Request $request)
 	{
 		return response()->json([
@@ -48,6 +61,13 @@ class ApiController extends \App\Http\Controllers\Controller {
 		]);
 	}
 
+	/**
+	 *
+	 * Update Artifical Intellegence Model
+	 *
+	 * @param Request $request
+	 * @param string $identifier
+	 */
 	public function updateModel(Request $request, string $identifier)
 	{
 		$request->validate([
@@ -72,6 +92,13 @@ class ApiController extends \App\Http\Controllers\Controller {
 		]);
 	}
 
+	/**
+	 *
+	 * Delete Artifical Intellegence Model
+	 *
+	 * @param Request $request
+	 * @param string $identifier
+	 */
 	public function deleteModel(Request $request, string $identifier)
 	{
 		$ai = ArtificialIntellegence::where('identifier', $identifier)->get()->first();
@@ -90,6 +117,13 @@ class ApiController extends \App\Http\Controllers\Controller {
 		]);
 	}
 
+	/**
+	 *
+	 * Train Artifical Intellegence Model
+	 *
+	 * @param Request $request
+	 * @param string $identifier
+	 */
 	public function trainModel(Request $request, string $identifier)
 	{
 		$request->validate([

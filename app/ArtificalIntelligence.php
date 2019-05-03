@@ -10,7 +10,7 @@ class ArtificalIntelligence extends Model
     ];
 
     protected $hidden = [
-    	'created_at', 'updated_at', 'user_id', 'export',
+    	'created_at', 'updated_at', 'user_id', 'export', 'id',
     ];
 
     public function user()
