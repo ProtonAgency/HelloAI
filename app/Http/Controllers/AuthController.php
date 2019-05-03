@@ -2,7 +2,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -14,6 +14,18 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('auth:api', ['except' => ['login']]);
+    }
+
+    public function register(Request $request)
+    {
+        $user = User::create([
+             'email'    => $request->email,
+             'password' => Hash::make($request->password),
+         ]);
+
+        $token = auth()->login($user);
+
+        return $this->respondWithToken($token);
     }
 
     /**
