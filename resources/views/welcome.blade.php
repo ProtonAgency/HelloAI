@@ -2,12 +2,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
-    <meta name="author" content="SmartTemplates" />
-    <meta name="description" content="landing page template for saas companies" />
-    <meta name="keywords" content="landing page template, saas landing page template, saas website template, one page saas template" />
+    <meta name="author" content="Hello Software" />
+    <meta name="description" content="Simple AI platform" />
+    <meta name="keywords" content="helloai, ai" />
     <title>HelloAI</title>
-    <link rel="stylesheet" href="css/swiper.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/swiper.css">
+    <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900" rel="stylesheet">
 </head>
 <body>
@@ -19,17 +19,10 @@
             <nav class="header__menu">
                 <ul>
                     <li><a class="selected header-link" href="#intro">HOME</a></li>
-                    <li class="menu-item-has-children">
-                        <a href="#features" class="header-link">FEATURES</a>
-                        <ul class="sub-menu">
-                            <li><a href="#hiw" class="header-link">HOW IT WORKS</a></li>
-                            <li><a href="#clients" class="header-link">OUR CLIENTS</a></li>
-                            <li><a href="#testimonials" class="header-link">TESTIMONIALS</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="#features" class="header-link">FEATURES</a></li>
                     <li><a href="#pricing" class="header-link">PRICING</a></li>
                     <li><a href="#support" class="header-link">CONTACT</a></li>
-                    <li class="header__btn header__btn--login modal-toggle" data-openpopup="signuplogin" data-popup="login"><a href="#">CLIENT LOGIN</a></li>
+                    <li class="header__btn header__btn--login modal-toggle"><a href="#">LOGIN</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,11 +33,11 @@
             <div class="intro">
                 <div class="intro__content">
                     <div class="intro__title">Say Hello to <span>AI</span></div>
-                    <div class="intro__subtitle">Landing page template for Software as a Service website</div>
+                    <div class="intro__subtitle">Simple yet powerful cloud based ai platform</div>
                     <div class="intro__description">For as low as <span>$2.95</span> per design</div>
                     <div class="intro__buttons intro__buttons--centered">
-                        <a href="index.html" class="btn btn--blue-bg">TRY DEMO</a>
-                        <a href="index.html" class="btn btn--green-bg">START NOW</a>
+                        <a href="#" class="btn btn--blue-bg">SEE HOW IT WORKS</a>
+                        <a href="#" class="btn btn--green-bg">START NOW</a>
                     </div>
                 </div>
             </div>
@@ -374,7 +367,7 @@
                 We believe we have created the most efficient SaaS landing page for your users. Landing page with features that will convince you to use it for your SaaS business.
             </div>
             <div class="intro__buttons intro__buttons--centered">
-                <a href="index.html" class="btn btn--green-bg">CREATE AN ACCOUNT</a>
+                <a href="#" class="btn btn--green-bg">CREATE AN ACCOUNT</a>
             </div>
         </div>
     </section>
@@ -382,7 +375,9 @@
         <div class="footer__content footer__content--fix-width footer__content--padding">
             <div class="grid grid--5col">
                 <div class="grid__item grid__item--x2">
-                    <h3 class="grid__title grid__title--footer-logo">HelloAI</h3>
+                    <h3 class="grid__title grid__title--footer-logo">
+                        <img style="height: 40px; vertical-align: middle" src="images/logo.png"> 
+                    </h3>
                     <p class="grid__text grid__text--copyright">Copyright &copy; 2019 HelloAI a product of <a href="https://lynndigital.com">Lynn Digital LLC</a> and <a href="https://hellosoftware.co">HelloSoftware</a>. All Rights Reserved. </p>
                     <ul class="grid__list grid__list--sicons">
                         <li><a href="https://twitter.com/hellosoftwareai"><img src="images/social/black/twitter.png" alt="" title=""/></a></li>
@@ -418,98 +413,6 @@
             </div>
         </div>
     </footer>
-    <section class="modal modal--signuplogin">
-        <div class="modal__overlay modal__overlay--toggle"></div>
-        <div class="modal__wrapper modal-transition">
-            <div class="modal__body">
-                <div class="modal__content modal__content--login">
-                    <div class="modal__info">
-                        <h2 class="modal__title">First time here?</h2>
-                        <div class="modal__descr">Join now and get <span>20% OFF</span> for all products</div>
-                        <ul class="modal__list">
-                            <li>premium access to all products</li>
-                            <li>free testing tools</li>
-                            <li>unlimited user accounts</li>
-                        </ul>
-                        <button class="modal__switch modal__switch--signup" data-popup="signup">Signup</button>
-                    </div>
-                    <div class="modal__form form">
-                        <h2 class="form__title">Login</h2>
-                        <form class="form__container" id="LoginForm" method="post" action="index.html">
-                            <div class="form__row">
-                                <label class="form__label" for="namec">Name</label>
-                                <input name="namec" id="namec" class="form__input" type="text"/>
-                                <span class="form__row-border"></span>
-                            </div>
-                            <div class="form__row">
-                                <label class="form__label">Email</label>
-                                <input name="emailc" class="form__input" type="text"/>  
-                                <span class="form__row-border"></span>                                  
-                            </div>
-                            <div class="modal__checkbox"><input id="remember" name="remember" value="remember" checked type="checkbox"><label for="remember">Keep me Signed in</label></div>
-                            <div class="modal__switch modal__switch--forgot" data-popup="forgot">Forgot Password?</div>
-                            <input type="submit" name="submit" class="form__submit btn btn--green-bg" id="submitl" value="LOGIN" />
-                        </form>
-                    </div>
-                </div>
-                <!-- End Modal login -->
-                <div class="modal__content modal__content--forgot">
-                    <div class="modal__form form">
-                        <h2 class="form__title">Forgot Password</h2>
-                        <form class="form__container" id="ForgotForm" method="post" action="index.html">
-                            <div class="form__row">
-                                <label class="form__label">Email</label>
-                                <input name="emailf" class="form__input" type="text"/>  
-                                <span class="form__row-border"></span>                                  
-                            </div>
-                            <input type="submit" name="submit" class="form__submit btn btn--green-bg" id="submitf" value="RESET PASSWORD" />
-                        </form>
-                    </div>
-                    <div class="modal__info">
-                        <h2 class="modal__title">We got you covered</h2>
-                        <div class="modal__descr">A new password will be sent by email. Remembered your password?</div>
-                        <button class="modal__switch modal__switch--signup" data-popup="login">Login</button>
-                    </div>
-                </div>
-                <!-- End Modal login -->
-                <div class="modal__content modal__content--signup">
-                    <div class="modal__form form">
-                        <h2 class="form__title">Signup</h2>
-                        <form class="form__container" id="SignupForm" method="post" action="index.html">
-                            <div class="form__row">
-                                <label class="form__label" for="names">Username</label>
-                                <input name="namec" id="names" class="form__input" type="text"/>
-                                <span class="form__row-border"></span>
-                            </div>
-                            <div class="form__row">
-                                <label class="form__label">Email</label>
-                                <input name="emails" class="form__input" type="text"/>  
-                                <span class="form__row-border"></span>                                  
-                            </div>
-                            <div class="form__row">
-                                <label class="form__label" for="pass">Password</label>
-                                <input name="pass" id="pass" class="form__input" type="password"/>
-                                <span class="form__row-border"></span>
-                            </div>
-                            <input type="submit" name="submit" class="form__submit btn btn--green-bg" id="submit" value="SIGNUP" />
-                        </form>
-                    </div>
-                    <div class="modal__info">
-                        <h2 class="modal__title">Allready have an account?</h2>
-                        <div class="modal__descr">Login now and starting using our <span>amazing</span> products</div>
-                        <ul class="modal__list">
-                            <li>premium access to all products</li>
-                            <li>free testing tools</li>
-                            <li>unlimited user accounts</li>
-                        </ul>
-                        <button class="modal__switch modal__switch--login" data-popup="login">Login</button>
-                    </div>
-                </div>
-                <!-- End Modal signup -->
-            </div>
-        </div>
-    </section>
-    <!-- Modal for Login and Signup -->
     <section class="modal modal--animation">
         <div class="modal__overlay modal__overlay--toggle"></div>
         <div class="modal__wrapper modal__wrapper--image modal-transition">
