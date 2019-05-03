@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\V1;
 
 use Illuminate\Http\Request;
 
@@ -7,7 +7,7 @@ use App\ArtificialIntellegence;
 
 use App\Analysis\TextAnalysis;
 
-class ApiController extends Controller {
+class ApiController extends \App\Http\Controllers\Controller {
 
 	public function createModel(Request $request)
 	{
