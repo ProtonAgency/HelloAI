@@ -30,7 +30,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 		{
 			return response()->json([
 				'success' => false,
-				'error' => 'Invalid model type'
+				'error' => 'Invalid model type',
 			]);
 		}
 
@@ -42,7 +42,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 
 		return response()->json([
 			'success' => true,
-			'data' => $ai
+			'data' => $ai,
 		]);
 	}
 

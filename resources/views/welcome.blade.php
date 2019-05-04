@@ -33,8 +33,7 @@
             <div class="intro">
                 <div class="intro__content">
                     <div class="intro__title">Say Hello to <span>AI</span></div>
-                    <div class="intro__subtitle">Simple yet powerful cloud based ai platform</div>
-                    <div class="intro__description">For as low as <span>$2.95</span> per design</div>
+                    <div class="intro__subtitle">A simple yet powerful cloud based AI platform.</div>
                     <div class="intro__buttons intro__buttons--centered">
                         <a href="#" class="btn btn--blue-bg">SEE HOW IT WORKS</a>
                         <a href="#" class="btn btn--green-bg">START NOW</a>
@@ -60,19 +59,19 @@
         <div class="section__content section__content--fluid-width section__content--padding">
             <div class="grid grid--4col grid--features">
                 <div class="grid__item">
-                    <div class="grid__icon"><img src="images/icons/icons-64/desktop-chart-64.png" alt="" title=""/></div>
-                    <h3 class="grid__title">SaaS Landing Page <span>Analysis</span></h3>
-                    <p class="grid__text">A perfect structure created after we analized trends in SaaS landing page designs. Analysis made to the most popular SaaS businesses.</p>
+                    <div class="grid__icon"><img src="images/icons/icons-64/tabs-64.png" alt="" title=""/></div>
+                    <h3 class="grid__title"><span>Simple</span></h3>
+                    <p class="grid__text">You can build and train your first model in minutes. HelloAI is perfect for both big and small AI projects.</p>
                 </div>
                 <div class="grid__item">
-                    <div class="grid__icon"><img src="images/icons/icons-64/target-64.png" alt="" title=""/></div>
-                    <h3 class="grid__title">Target <span>audience</span></h3>
-                    <p class="grid__text">Blocks, Elements and Modifiers. A smart HTML/CSS structure that can easely be reused. Layout driven by the purpose of modularity.</p>
+                    <div class="grid__icon"><img src="images/icons/icons-64/meter-64.png" alt="" title=""/></div>
+                    <h3 class="grid__title"><span>Powerful</span></h3>
+                    <p class="grid__text">HelloAI is built on of a very powerful cloud network.</p>
                 </div>
                 <div class="grid__item">
                     <div class="grid__icon"><img src="images/icons/icons-64/security-64.png" alt="" title=""/></div>
-                    <h3 class="grid__title">Best online <span>Security</span></h3>
-                    <p class="grid__text">A perfect structure created after we analized trends in SaaS landing page designs. Analysis made to the most popular SaaS businesses.</p>
+                    <h3 class="grid__title"><span>Secure</span></h3>
+                    <p class="grid__text">All of your information and datasets are encrypted allowing you to train advanced AI models with real data.</p>
                 </div>
             </div>
         </div>
@@ -85,7 +84,7 @@
         <div class="section__content section__content--fix-width section__content--padding">
             <h2 class="section__title section__title--centered">Easy to use API</h2>
             <div class="section__description section__description--centered">
-                Guide to setup and configuration. You can present below a guide and a description of how your system configuration works and add some animated screens.
+                You can get started with these code snippets or you can view our <a href="#">documentation</a>.
             </div>
             <div class="hiw">
                 <div class="hiw-titles">
