@@ -159,23 +159,28 @@ class ApiController extends \App\Http\Controllers\Controller {
 			]);
 		}
 
-		$import = $ai->export;
-		if($import !== null)
-		{
-			$import = unserialize($import, [\Phpml\Estimator::class]);
-		}
+		$ai->train($samples, $labels);
 
-		$trainer = new TextAnalysis($samples, $labels, $import);
-		$accuracy = $trainer->train();
+		// cannot train during web request / don't have enough RAM
+		// maybe use a cloud service and offload the training there and bill users at cost for it?
 
-		$ai->export = $trainer->export();
-		$ai->save();
+		// $import = $ai->export;
+		// if($import !== null)
+		// {
+		// 	$import = unserialize($import, [\Phpml\Estimator::class]);
+		// }
+
+		// $trainer = new TextAnalysis($samples, $labels, $import);
+		// $accuracy = $trainer->train();
+
+		// $ai->export = $trainer->export();
+		// $ai->save();
 
 		return response()->json([
 			'success' => true,
 			'data' => [
-				'accuracy' => $accuracy,
-				'rows' => $rows,
+				'status' => 'Training 0 of ' . round($rows / 3),
+				'accuracy' => 0,
 			],
 		]);
 	}

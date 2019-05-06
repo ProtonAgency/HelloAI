@@ -33,7 +33,7 @@ class TextAnalysis {
 	public function train()
 	{
 		$dataset = new ArrayDataset($this->dataset, $this->labels);
-		// for testing
+		// uncomment for testing
 		// $dataset = new FilesDataset(__DIR__ . '/bbc');
 
 		$split = new StratifiedRandomSplit($dataset, 0.3);

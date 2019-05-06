@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+use Illuminate\Support\Facades\DB;
+
 class CreateArtificalIntelligencesTable extends Migration
 {
     /**
@@ -22,6 +24,9 @@ class CreateArtificalIntelligencesTable extends Migration
             $table->string('identifier');
             $table->timestamps();
         });
+
+        // no `LONGBLOB` in the schema builder :/
+        DB::statement("ALTER TABLE artifical_intelligences ADD export LONGBLOB");
     }
 
     /**
