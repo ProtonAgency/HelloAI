@@ -125,6 +125,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 	 */
 	public function trainModel(Request $request, string $identifier)
 	{
+		// todo: allow file uploads
 		$request->validate([
 			'dataset' => 'required|array',
 		]);
@@ -181,6 +182,45 @@ class ApiController extends \App\Http\Controllers\Controller {
 			'data' => [
 				'status' => 'Training 0 of ' . round($rows / 3),
 				'accuracy' => 0,
+			],
+		]);
+	}
+
+	/**
+	 *
+	 * Get models prediction
+	 *
+	 * @param Request $request
+	 * @param string $identifier
+	 */
+	public function predictModel(Request $request, $identifier)
+	{
+		$request->validate([
+			'dataset' => 'required|array',
+		]);
+
+		$ai = ArtificialIntellegence::where('identifier', $identifier)->get()->first();
+		if($ai === null)
+		{
+			return response()->json([
+				'success' => false,
+				'error' => 'Unable to locate model',
+			]);
+		}
+
+        $svc = null;
+        if($ai->export !== null)
+        {
+            $svc = unserialize($ai->export, [\Phpml\Estimator::class]);
+        }
+
+        $trainer = new \App\Analysis\{ucwords(implode(' ', explode('_', $ai->type)))}([], [], $svc);
+
+		return response()->json([
+			'success' => true,
+			'data' => [
+				'status' => $trainer->predict($request->input('dataset')),
+				'input' => $request->input('dataset'),
 			],
 		]);
 	}

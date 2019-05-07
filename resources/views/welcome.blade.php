@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="/css/swiper.css">
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900" rel="stylesheet">
+
+    <style type="text/css">
+        .disabled {
+            color: currentColor;
+            cursor: not-allowed;
+            opacity: 0.5;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -22,7 +31,7 @@
                     <li><a href="#features" class="header-link">FEATURES</a></li>
                     <li><a href="#pricing" class="header-link">PRICING</a></li>
                     <li><a href="#support" class="header-link">CONTACT</a></li>
-                    <li class="header__btn header__btn--login modal-toggle"><a href="#">LOGIN</a></li>
+                    <li class="header__btn header__btn--login disabled"><a href="#">LOGIN</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,7 +45,7 @@
                     <div class="intro__subtitle">A simple yet powerful cloud based AI platform.</div>
                     <div class="intro__buttons intro__buttons--centered">
                         <a href="#" class="btn btn--blue-bg">SEE HOW IT WORKS</a>
-                        <a href="#" class="btn btn--green-bg">START NOW</a>
+                        <a href="#" class="btn btn--green-bg disabled">START NOW</a>
                     </div>
                 </div>
             </div>
@@ -47,7 +56,7 @@
         <div class="section__content section__content--fix-width">
             <div class="intro-animation" data-paroller-factor="0.4" data-paroller-type="foreground" data-paroller-direction="vertical">
                 <div class="animation__play modal-toggle" data-openpopup="animation"><span></span></div>
-                <img src="images/intro-animation.png" alt="" title=""/>
+                <!-- <img src="images/intro-animation.png" alt="" title=""/> -->
             </div>
         </div>
         <svg class="svg-intro-animation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -198,13 +207,12 @@
         <div class="section__content section__content--fix-width section__content--padding">
             <h2 class="section__title section__title--centered">Our Plans</h2>
             <div class="section__description section__description--centered">
-                We believe we have created the most efficient SaaS landing page for your users. Landing page with features that will convince you to use it for your SaaS business.
+                Just like our platform our pricing plans were designed to fit any project within any budget! Need something bigger? <a href="mailto:sales@lynndigital.com">contact sales</a>.
             </div>
             <div class="pricing">
                 <div class="pricing__switcher switcher">
                     <div class="switcher__buttons">
                         <div class="switcher__button switcher__button--enabled">Monthly</div>
-                        <div class="switcher__button">Yearly</div>
                         <div class="switcher__border"></div>
                     </div>
                 </div>
@@ -212,7 +220,6 @@
                     <h3 class="pricing__title">FREE</h3>
                     <div class="pricing__values">
                         <div class="pricing__value pricing__value--show"><span>$</span>0 <b>/ month</b></div>
-                        <div class="pricing__value pricing__value--hide pricing__value--hidden"><span>$</span>0 <b>/ yearly</b></div>
                     </div>
                     <ul class="pricing__list">
                         <li><b>1</b> User Account</li>
@@ -229,7 +236,6 @@
                     <h3 class="pricing__title">STARTUP</h3>
                     <div class="pricing__values">
                         <div class="pricing__value pricing__value--show"><span>$</span>29 <b>/ month</b></div>
-                        <div class="pricing__value pricing__value--hide pricing__value--hidden"><span>$</span>320 <b>/ yearly</b></div>
                     </div>
                     <ul class="pricing__list">
                         <li><b>10</b> User Account</li>
@@ -248,7 +254,6 @@
                     <h3 class="pricing__title">PRO</h3>
                     <div class="pricing__values">
                         <div class="pricing__value pricing__value--show"><span>$</span>49 <b>/ month</b></div>
-                        <div class="pricing__value pricing__value--hide pricing__value--hidden"><span>$</span>529 <b>/ yearly</b></div>
                     </div>
                     <ul class="pricing__list">
                         <li><b>50</b> User Account</li>
@@ -265,7 +270,6 @@
                     <h3 class="pricing__title">ULTRA</h3>
                     <div class="pricing__values">
                         <div class="pricing__value pricing__value--show"><span>$</span>99 <b>/ month</b></div>
-                        <div class="pricing__value pricing__value--hide pricing__value--hidden"><span>$</span>900 <b>/ yearly</b></div>
                     </div>
                     <ul class="pricing__list">
                         <li><b>Unlimited</b> User Account</li>
@@ -283,7 +287,7 @@
         </div>
     </section>
     <!-- Section -- testimonials -->
-    <section class="section section--testimonials" id="testimonials">
+<!--     <section class="section section--testimonials" id="testimonials">
         <div class="section__content section__content--fix-width section__content--padding">
             <h2 class="section__title section__title--centered">Success stories</h2>
             <div class="testimonials">
@@ -295,49 +299,14 @@
                         </div>
                         <div class="testimonials__source">Lason Duvan <a href="#">New York Business Center</a></div>
                     </div>
-                    <div class="testimonials__slide swiper-slide">
-                        <div class="testimonials__thumb" data-swiper-parallax="-50%"><img src="images/avatar-2.jpg" alt="" title=""/></div>
-                        <div class="testimonials__text" data-swiper-parallax="-100%">
-                            <p>"No one can make you successful; the will to success comes from within.' I've made this my motto. I've internalized it to the point of understanding that the success of my actions and/or endeavors doesn't depend on anyone else, and that includes a possible failure"</p>
-                        </div>
-                        <div class="testimonials__source">Jada Sacks <a href="#">Paris Tehnics</a></div>
-                    </div>
-                    <div class="testimonials__slide swiper-slide">
-                        <div class="testimonials__thumb" data-swiper-parallax="-50%"><img src="images/avatar-3.jpg" alt="" title=""/></div>
-                        <div class="testimonials__text" data-swiper-parallax="-100%">
-                            <p>"The American Dream is that any man or woman, despite of his or her background, can change their circumstances and rise as high as they are willing to work"</p>
-                        </div>
-                        <div class="testimonials__source">Lason Duvan <a href="#">Music Software</a></div>
-                    </div>
-                    <div class="testimonials__slide swiper-slide">
-                        <div class="testimonials__thumb" data-swiper-parallax="-50%"><img src="images/avatar-4.jpg" alt="" title=""/></div>
-                        <div class="testimonials__text" data-swiper-parallax="-100%">
-                            <p>"Business is all about the customer: what the customer wants and what they get. Generally, every customer wants a product or service that solves their problem, worth their money, and is delivered with amazing customer service"</p>
-                        </div>
-                        <div class="testimonials__source">Duran Jackson <a href="#">New York Business Center</a></div>
-                    </div>
-                    <div class="testimonials__slide swiper-slide">
-                        <div class="testimonials__thumb" data-swiper-parallax="-50%"><img src="images/avatar-5.jpg" alt="" title=""/></div>
-                        <div class="testimonials__text" data-swiper-parallax="-100%">
-                            <p>"No one can make you successful; the will to success comes from within.' I've made this my motto. I've internalized it to the point of understanding that the success of my actions and/or endeavors doesn't depend on anyone else, and that includes a possible failure"</p>
-                        </div>
-                        <div class="testimonials__source">Maria Allesi <a href="#">Italy Solutions</a></div>
-                    </div>
-                    <div class="testimonials__slide swiper-slide">
-                        <div class="testimonials__thumb" data-swiper-parallax="-50%"><img src="images/avatar-6.jpg" alt="" title=""/></div>
-                        <div class="testimonials__text" data-swiper-parallax="-100%">
-                            <p>"The American Dream is that any man or woman, despite of his or her background, can change their circumstances and rise as high as they are willing to work"</p>
-                        </div>
-                        <div class="testimonials__source">Jenifer Patrison<a href="#">App Dating</a></div>
-                    </div>
                 </div>
                 <div class="testimonials__pagination swiper-pagination"></div>
             </div>
             <div class="clear"></div>
         </div>
-    </section>
+    </section> -->
     <!-- Section -->
-    <section class="section section--clients" id="clients">
+<!--     <section class="section section--clients" id="clients">
         <div class="section__content section__content--fix-width">
             <div class="grid grid--5col">
                 <div class="grid__item">
@@ -357,16 +326,16 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Section -->
     <section class="section section--cta" id="cta">
         <div class="section__content section__content--fix-width section__content--padding">
             <h2 class="section__title section__title--centered section__title--cta">Get Started Now!</h2>
             <div class="section__description section__description--centered section__description--cta">
-                We believe we have created the most efficient SaaS landing page for your users. Landing page with features that will convince you to use it for your SaaS business.
+                We believe we have created one of the simplest cloud based AI platforms there is! We'd love to help you build something great or make your existing project even cooler with AI.
             </div>
             <div class="intro__buttons intro__buttons--centered">
-                <a href="#" class="btn btn--green-bg">CREATE AN ACCOUNT</a>
+                <a href="#" class="btn btn--green-bg disabled">CREATE AN ACCOUNT</a>
             </div>
         </div>
     </section>
@@ -387,9 +356,6 @@
                     <ul class="grid__list grid__list--fmenu">
                         <li><a href="#">About</a></li>
                         <li><a href="#">Carrers</a></li>
-                        <li><a href="#">Awards</a></li>
-                        <li><a href="#">Users Program</a></li>
-                        <li><a href="#">Locations</a></li>
                     </ul>
                 </div>
                 <div class="grid__item">
@@ -399,7 +365,6 @@
                         <li><a href="#">API</a></li>
                         <li><a href="#">Pricing</a></li>
                         <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Release Notes</a></li>
                     </ul>
                 </div>
                 <div class="grid__item">
