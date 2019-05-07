@@ -12,7 +12,11 @@ use Phpml\Metric\Accuracy;
 use Phpml\Tokenization\NGramTokenizer;
 use Phpml\Estimator;
 
+use App\Traits\DatasetParser;
+
 class TextAnalysis {
+
+	use DatasetParser;
 	
 	/**@var array[] */
 	protected $dataset = [];
@@ -25,7 +29,7 @@ class TextAnalysis {
 
 	public function __construct(array $dataset, array $labels, ?Svc $classifier = null)
 	{
-		$this->dataset = $dataset;
+		$this->dataset = $this->prepareDataset($dataset);
 		$this->labels = $labels;
 		$this->classifier = $classifier;
 	}
