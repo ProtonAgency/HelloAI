@@ -3,9 +3,12 @@ namespace App\Http\Controllers\V1;
 
 use Illuminate\Http\Request;
 
-use App\ArtificialIntellegence;
-
 use App\Analysis\TextAnalysis;
+use App\ArtificialIntellegence;
+use App\Rules\Host;
+
+use phpseclib\Net\SFTP;
+use phpseclib\Crypt\RSA;
 
 class ApiController extends \App\Http\Controllers\Controller {
 
@@ -127,28 +130,79 @@ class ApiController extends \App\Http\Controllers\Controller {
 	{
 		// todo: allow file uploads
 		$request->validate([
-			'dataset' => 'required|array',
+			'dataset' => 'required_without:sftp|array_or_file|bail',
+			'sftp' => 'required_without:dataset|array|bail',
+			'sftp.host' => [
+				'required',
+				new Host,
+				'bail',
+			],
+			'sftp.post' => 'required|integer|bail',
+			'sftp.username' => 'required|string|bail',
+			'sftp.password' => 'required_without:sftp.key|string|bail',
+			'sftp.key' => 'required_without:sftp.password|string|bail',
+			'sftp.directory' => 'required|string|bail',
 		]);
-
-		$dataset = $request->input('dataset');
 
 		$samples = [];
 		$labels = [];
-		$rows = count($dataset);
-		foreach($dataset as $row)
-		{
-			if(count(array_keys($row)) !== 2)
-			{
-				return response()->json([
-					'success' => false,
-					'error' => 'All dataset rows must have two columns: a sample and label',
-				]);
-			}
-			else
-			{
-				$samples[] = $row[0];
-				$labels[] = $row[1];
-			}
+
+		$type = $request->input('dataset', null) === null ? 'dataset' : 'sftp';
+		switch ($type) {
+			case 'dataset':
+				$dataset = $request->input('dataset');
+
+				$rows = count($dataset);
+				foreach($dataset as $row)
+				{
+					if(count(array_keys($row)) !== 2)
+					{
+						return response()->json([
+							'success' => false,
+							'error' => 'All dataset rows must have two columns: a sample and label',
+						]);
+					}
+					else
+					{
+						$samples[] = $row[0];
+						$labels[] = $row[1];
+					}
+				}
+			break;
+			case 'sftp':
+				$sftp = new SFTP($request->input('sftp.host'));
+
+				if($request->input('sftp.password', null) !== null)
+				{
+					$login = $sftp->login(
+						$request->input('sftp.username'), 
+						$request->input('sftp.password')
+					);
+				}
+				else
+				{
+					$key = new RSA;
+					$key->loadKey($request->input('sftp.key'));
+
+					$login = $sftp->login(
+						$request->input('sftp.username'), 
+						$key
+					);
+				}
+
+				if(!$login)
+				{
+					return response()->json([
+						'success' => false,
+						'error' => 'Unable to authenticate on ' . $request->query('sftp.host'),
+					]);
+				}
+
+				$data = collect($sftp->rawlist())->flat();
+
+				$samples = array_values($data);
+				$labels = array_keys($data);
+			break;
 		}
 
 		$ai = ArtificialIntellegence::where('identifier', $identifier)->get()->first();
@@ -157,6 +211,14 @@ class ApiController extends \App\Http\Controllers\Controller {
 			return response()->json([
 				'success' => false,
 				'error' => 'Unable to locate model',
+			]);
+		}
+
+		if(count($samples) !== count($labels) || empty($samples) || empty($labels))
+		{
+			return response()->json([
+				'success' => false,
+				'error' => 'Invalid or empty dataset. Please validate that your dataset is not empty or all values have alphanumeric keys',
 			]);
 		}
 
