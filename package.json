@@ -7,10 +7,13 @@
         "watch-poll": "npm run watch -- --watch-poll",
         "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
         "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "build-custom-resource-toolbar": "cd nova-components/CustomResourceToolbar && npm run dev",
+        "build-custom-resource-toolbar-prod": "cd nova-components/CustomResourceToolbar && npm run prod"
     },
     "devDependencies": {
-        "axios": "^0.18",
+        "@websanova/vue-auth": "^2.21.14-beta",
+        "axios": "^0.18.0",
         "bootstrap": "^4.0.0",
         "cross-env": "^5.1",
         "jquery": "^3.2",
@@ -20,6 +23,26 @@
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0",
-        "vue": "^2.5.17"
+        "tailwindcss": "^0.7.4",
+        "vue": "^2.6.10",
+        "vue-axios": "^2.1.4",
+        "vue-loader": "^15.7.0",
+        "vue-router": "^3.0.6",
+        "vue-template-compiler": "^2.6.10",
+        "vuesax": "^3.8.61"
+    },
+    "dependencies": {
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "laravel-vue-pagination": "^2.3.0",
+        "material-icons": "^0.3.1",
+        "moment": "^2.24.0",
+        "prismjs": "^1.16.0",
+        "vue-feather-icons": "^4.10.0",
+        "vue-perfect-scrollbar": "^0.1.0",
+        "vue-prism-component": "^1.1.1",
+        "vue-promised": "^1.1.1",
+        "vuedraggable": "^2.20.0",
+        "vuetify": "^1.5.7",
+        "vuex": "^3.1.0"
     }
 }
