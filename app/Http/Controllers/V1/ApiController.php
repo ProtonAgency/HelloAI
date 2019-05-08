@@ -204,7 +204,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 					]);
 				}
 
-				$data = (array) collect($sftp->rawlist())->flat()->all();
+				$data = (array) collect($sftp->rawlist($request->input('sftp.directory')))->flat()->all();
 
 				$removeFromArray = [
 					'..',
