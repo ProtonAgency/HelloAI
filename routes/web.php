@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dashboard/{any}', function () {
+    return view('application');
+})->where('any', '.*');

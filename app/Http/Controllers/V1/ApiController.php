@@ -218,9 +218,10 @@ class ApiController extends \App\Http\Controllers\Controller {
 						unset($data[$key]);
 					}
 				}
+				$labels = array_values($data);
 
-				$samples = array_values($data);
-				$labels = array_keys($data);
+				// TODO: READ FILES INTO ARRAY
+				$dataset = [];
 			break;
 		}
 

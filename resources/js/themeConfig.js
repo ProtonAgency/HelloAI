@@ -11,7 +11,6 @@ import Vue from 'vue'
 import Vuesax from 'vuesax'
 Vue.use(Vuesax, { theme:{ colors } });
 
-
 // CONFIGS
 const themeConfig = {
 	theme: 'light',						// options[String]: 'light'(default), 'dark', 'semi-dark'

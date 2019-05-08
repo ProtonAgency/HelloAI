@@ -3,24 +3,24 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 use Phpml\Dataset\FilesDataset;
-$a = [];
-for ($i=0; $i < 500; $i++) { 
-	$new_dataset = [];
-	$dataset = new FilesDataset(__DIR__ . '/app/Analysis/1mb');
-	$labels = $dataset->getTargets();
-	foreach($dataset->getSamples() as $key => $string)
-	{
-		$new_dataset[$key] = $string;
-	}
+// $a = [];
+// for ($i=0; $i < 500; $i++) { 
+// 	$new_dataset = [];
+// 	$dataset = new FilesDataset(__DIR__ . '/app/Analysis/1mb');
+// 	$labels = $dataset->getTargets();
+// 	foreach($dataset->getSamples() as $key => $string)
+// 	{
+// 		$new_dataset[$key] = $string;
+// 	}
 
-	$time = microtime(true);
+// 	$time = microtime(true);
 
-	$t = new \App\Analysis\TextAnalysis($new_dataset, $labels);
-	$a[] = $t->train();
-}
+// 	$t = new \App\Analysis\TextAnalysis($new_dataset, $labels);
+// 	$a[] = $t->train();
+// }
 
-$average = array_sum($a) / count($a);
-// echo $average;
+// $average = array_sum($a) / count($a);
+// // echo $average;
 
 $new_dataset = [];
 $dataset = new FilesDataset(__DIR__ . '/app/Analysis/1mb');
@@ -35,8 +35,9 @@ $time = microtime(true); // time in Microseconds
 $t = new \App\Analysis\TextAnalysis($new_dataset, $labels);
 $t->train();
 
-echo 'Average Accuracy: ' .  $average . PHP_EOL;
+// echo 'Average Accuracy: ' .  $average . PHP_EOL;
 echo 'Train Time: ' . (microtime(true) - $time) . 's' . PHP_EOL;
+echo 'AI Model Size: ' . strlen($t->export()) . PHP_EOL;
 
 echo PHP_EOL . PHP_EOL . '----TESTS----' . PHP_EOL . PHP_EOL;
 
