@@ -37,9 +37,6 @@ class TextAnalysis {
 	public function train()
 	{
 		$dataset = new ArrayDataset($this->dataset, $this->labels);
-		// uncomment for testing
-		// $dataset = new FilesDataset(__DIR__ . '/bbc');
-		// $dataset = new FilesDataset(__DIR__ . '/1mb');
 
 		$split = new StratifiedRandomSplit($dataset);
 		// $samples = $split->getTrainSamples();
