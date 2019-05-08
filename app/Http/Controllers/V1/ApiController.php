@@ -204,7 +204,20 @@ class ApiController extends \App\Http\Controllers\Controller {
 					]);
 				}
 
-				$data = collect($sftp->rawlist())->flat();
+				$data = (array) collect($sftp->rawlist())->flat()->all();
+
+				$removeFromArray = [
+					'..',
+					'.',
+				];
+
+				foreach($removeFromArray as $key)
+				{
+					if(isset($data[$key]))
+					{
+						unset($data[$key]);
+					}
+				}
 
 				$samples = array_values($data);
 				$labels = array_keys($data);
