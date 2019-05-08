@@ -43,6 +43,12 @@ class ApiController extends \App\Http\Controllers\Controller {
 			'identifier' => str_random(32),
 		]);
 
+		$latest_train = $ai->trainresults()->orderBy('created_at', 'desc')->first();
+
+		$ai->training = $latest_train === null || $latest_train->index === $latest_train->of;
+		$ai->accuracy = $latest_train !== null || $latest_train->index !== $latest_train->of ? $latest_train->accuracy : 0;
+
+		// if accuracy === 0 then it hasn't been trained or not enough data
 		return response()->json([
 			'success' => true,
 			'data' => $ai,
@@ -285,5 +291,44 @@ class ApiController extends \App\Http\Controllers\Controller {
 				'input' => $request->input('dataset'),
 			],
 		]);
+	}
+
+	/**
+	 *
+	 * Check if a model is being trained
+	 *
+	 * @param Request $request
+	 * @param string $identifier
+	 */
+	public function isTrainingModel(Request $request, $identifier)
+	{
+		$ai = ArtificialIntellegence::where('identifier', $identifier)->get()->first();
+		if($ai === null)
+		{
+			return response()->json([
+				'success' => false,
+				'error' => 'Unable to locate model',
+			]);
+		}
+
+		$latest_train = $ai->trainresults()->orderBy('created_at', 'desc')->first();
+		if($latest_train === null || $latest_train->index === $latest_train->of)
+		{
+			return response()->json([
+				'success' => true,
+				'data' => [
+					'training' => false,
+				],
+			]);
+		}
+		else
+		{
+			return response()->json([
+				'success' => false,
+				'data' => [
+					'training' => false,
+				],
+			]);
+		}
 	}
 }

@@ -29,5 +29,6 @@ Route::group(['middleware' => 'auth.jwt', 'prefix' => 'api'], function() {
 		Route::post('models/{identifier}/delete', 'V1/ApiController@deleteModel');
 		Route::post('models/{identifier}/train', 'V1/ApiController@trainModel');
 		Route::post('models/{identifier}/predict', 'V1/ApiController@predictModel');
+		Route::get('models/{identifier}/predict', 'V1/ApiController@isTrainingModel');
 	});
 });

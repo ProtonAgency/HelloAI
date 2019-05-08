@@ -18,6 +18,11 @@ class ArtificalIntelligence extends Model
     	return $this->belongsTo(\App\User::class);
     }
 
+    public function trainresults()
+    {
+        return $this->hasMany(\App\TrainResult::class);
+    }
+
     public function train(array $dataset, array $labels, bool $now = false)
     {
         $datasets = array_chunk($dataset, 3);
