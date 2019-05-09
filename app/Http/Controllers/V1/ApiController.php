@@ -204,7 +204,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 					]);
 				}
 
-				$data = (array) collect($sftp->rawlist($request->input('sftp.directory')))->flat()->all();
+				$labels = (array) $sftp->nlist($request->input('sftp.directory'));
 
 				$removeFromArray = [
 					'..',
@@ -213,15 +213,34 @@ class ApiController extends \App\Http\Controllers\Controller {
 
 				foreach($removeFromArray as $key)
 				{
-					if(isset($data[$key]))
+					if(in_array($key, $removeFromArray))
 					{
-						unset($data[$key]);
+						unset($labels[array_search($key, $removeFromArray)]);
 					}
 				}
-				$labels = array_values($data);
 
-				// TODO: READ FILES INTO ARRAY
 				$dataset = [];
+				$new_labels = [];
+				foreach($labels as $key => $label)
+				{
+					$path = rtrim($request->input('sftp.directory'), '/') . '/' . $label;
+					$list = $sftp->nlist($path);
+					if(!empty($list)) //its a directory
+					{
+						foreach($list as $file)
+						{
+							$contents = $sftp->get($path . '/' . $file);
+							if(strlen($contents) > 0 && !in_array($file, $removeFromArray))
+							{
+								$new_labels[] = $label;
+								$dataset[] = $contents;
+							}
+						}
+					}
+				}
+
+				$labels = $new_labels;
+				$dataset = $dataset;
 			break;
 		}
 
