@@ -20,7 +20,7 @@ class CreateArtificalIntelligencesTable extends Migration
             $table->integer('user_id');
             $table->string('type')->nullable();
             $table->string('name');
-            $table->binary('export');
+            // $table->binary('export');
             $table->string('identifier');
             $table->timestamps();
         });
