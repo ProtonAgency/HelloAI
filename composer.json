@@ -6,6 +6,12 @@
         "framework",
         "laravel"
     ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./nova"
+        }
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
@@ -16,7 +22,8 @@
         "laravel/tinker": "^1.0",
         "php-ai/php-ml": "^0.8.0",
         "phpseclib/phpseclib": "~2.0",
-        "tymon/jwt-auth": "1.0.*"
+        "tymon/jwt-auth": "1.0.*",
+        "laravel/nova": "*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
