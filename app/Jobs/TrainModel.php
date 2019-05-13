@@ -7,13 +7,13 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 
-use App\ArtificialIntellegence;
+use App\ArtificalIntelligence;
 
 class TrainModel implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    /**@var ArtificialIntellegence*/
+    /**@var ArtificalIntelligence*/
     protected $model;
 
     /**@var array*/
@@ -33,7 +33,7 @@ class TrainModel implements ShouldQueue
      *
      * @return void
      */
-    public function __construct(ArtificialIntellegence $model, array $dataset, array $labels, int $index, int $index_of)
+    public function __construct(ArtificalIntelligence $model, array $dataset, array $labels, int $index, int $index_of)
     {
         $this->model = $model;
         $this->dataset = $dataset;
