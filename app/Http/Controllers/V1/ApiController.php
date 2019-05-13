@@ -57,12 +57,42 @@ class ApiController extends \App\Http\Controllers\Controller {
 
 	/**
 	 *
-	 * List Your Artifical Intellegence Models
+	 * Get a model
 	 *
 	 * @param Request $request
 	 */
-	public function listModels(Request $request)
+	public function fetchModel(Request $request)
 	{
+		$latest_train = $ai->trainresults()->orderBy('created_at', 'desc')->first();
+
+		$ai->training = $latest_train === null || $latest_train->index === $latest_train->of;
+		$ai->accuracy = $latest_train !== null || $latest_train->index !== $latest_train->of ? $latest_train->accuracy : 0;
+
+		// if accuracy === 0 then it hasn't been trained or not enough data
+		return response()->json([
+			'success' => true,
+			'data' => $ai,
+		]);
+	}
+
+	/**
+	 *
+	 * List Your Artifical Intellegence Models
+	 *
+	 * @param Request $request
+	 * @param string $identifier
+	 */
+	public function listModels(Request $request, string $identifier)
+	{
+		$ai = ArtificialIntellegence::where('identifier', $identifier)->get()->first();
+		if($ai === null)
+		{
+			return response()->json([
+				'success' => false,
+				'error' => 'Unable to locate model',
+			]);
+		}
+		
 		return response()->json([
 			'success' => true,
 			'data' => $request->user()->models(),
