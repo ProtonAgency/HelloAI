@@ -8,6 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 
 use App\ArtificalIntelligence;
+use App\TrainResult;
 
 class TrainModel implements ShouldQueue
 {
