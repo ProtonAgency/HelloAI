@@ -41,6 +41,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 			'name' => $request->input('name'),
 			'type' => $request->input('type'),
 			'identifier' => str_random(32),
+			'user_id' => $request->user()->id,
 		]);
 
 		$latest_train = $ai->trainresults()->orderBy('created_at', 'desc')->first();
