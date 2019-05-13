@@ -27,7 +27,7 @@ class TextAnalysis {
 	/**@var Svc */
 	protected $classifier;
 
-	public function __construct(array $dataset, array $labels, ?Svc $classifier = null)
+	public function __construct(array $dataset, array $labels, ?Pipeline $classifier = null)
 	{
 		$this->dataset = $this->prepareDataset($dataset);
 		$this->labels = $labels;
