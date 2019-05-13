@@ -38,7 +38,7 @@ class ArtificalIntelligence extends Model
             }
             else
             {
-                dispatch_now(new \App\Jobs\TrainModel($this, $datasets[$i], $labels[i]), $i, count($datasets))
+                dispatch_now(new \App\Jobs\TrainModel($this, $datasets[$i], $labels[i]), $i, count($datasets));
             }
         }
     }
