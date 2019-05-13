@@ -92,7 +92,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 				'error' => 'Unable to locate model',
 			]);
 		}
-		
+
 		return response()->json([
 			'success' => true,
 			'data' => $request->user()->models(),
@@ -324,7 +324,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 	 * @param Request $request
 	 * @param string $identifier
 	 */
-	public function predictModel(Request $request, $identifier)
+	public function predictModel(Request $request, string $identifier)
 	{
 		$request->validate([
 			'dataset' => 'required|array',
