@@ -345,7 +345,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 		return response()->json([
 			'success' => true,
 			'data' => [
-				'status' => 'Training 0 of ' . round($rows / 3),
+				'status' => 'Training 0 of ' . round(count($labels) / 3),
 				'accuracy' => 0,
 			],
 		]);
