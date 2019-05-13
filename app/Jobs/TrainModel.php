@@ -26,7 +26,7 @@ class TrainModel implements ShouldQueue
     protected $index;
 
     /**@var int*/
-    protected $index_of,
+    protected $index_of;
 
     /**
      * Create a new job instance.
