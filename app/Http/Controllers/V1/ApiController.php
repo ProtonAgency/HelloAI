@@ -315,7 +315,8 @@ class ApiController extends \App\Http\Controllers\Controller {
             $svc = unserialize($ai->export, [\Phpml\Estimator::class]);
         }
 
-        $trainer = new \App\Analysis\{ucwords(implode(' ', explode('_', $ai->type)))}([], [], $svc);
+        $type = '\App\Analysis\\' . ucwords(implode(' ', explode('_', $ai->type))) . 'Analysis';
+        $trainer = new $type([], [], $svc);
 
 		return response()->json([
 			'success' => true,
