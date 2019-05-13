@@ -176,8 +176,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 	{
 		// todo: allow file uploads
 		$request->validate([
-			'dataset' => 'required_without:sftp|array_or_file|bail',
-			'sftp' => 'required_without:dataset|array|bail',
+			// 'dataset' => 'required_without:sftp|array_or_file|bail',
 			'sftp.host' => [
 				'required',
 				new Host,
@@ -185,7 +184,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 			],
 			'sftp.post' => 'required|integer|bail',
 			'sftp.username' => 'required|string|bail',
-			'sftp.password' => 'required_without:sftp.key|string|bail',
+			// 'sftp.password' => 'required_without:sftp.key|string|bail',
 			'sftp.key' => 'required_without:sftp.password|string|bail',
 			'sftp.directory' => 'required|string|bail',
 		]);
