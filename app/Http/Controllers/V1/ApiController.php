@@ -283,6 +283,8 @@ class ApiController extends \App\Http\Controllers\Controller {
 					}
 				}
 
+				var_dump($labels); exit;
+
 				$dataset = [];
 				$new_labels = [];
 				foreach($labels as $key => $label)
