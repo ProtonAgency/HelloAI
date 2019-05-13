@@ -283,8 +283,6 @@ class ApiController extends \App\Http\Controllers\Controller {
 					}
 				}
 
-				var_dump($labels); exit; exit;
-
 				$dataset = [];
 				$new_labels = [];
 				foreach($labels as $key => $label)
@@ -307,6 +305,8 @@ class ApiController extends \App\Http\Controllers\Controller {
 
 				$labels = $new_labels;
 				$dataset = $dataset;
+
+				var_dump($labels, $dataset); exit;
 			break;
 		}
 
