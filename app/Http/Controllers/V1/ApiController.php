@@ -279,11 +279,10 @@ class ApiController extends \App\Http\Controllers\Controller {
 				{
 					if(in_array($key, $removeFromArray))
 					{
-						unset($labels[array_search($key, $removeFromArray)]);
+						unset($labels[array_search($key, $labels)]);
 					}
 				}
 
-				var_dump($labels); exit;
 
 				$dataset = [];
 				$new_labels = [];
