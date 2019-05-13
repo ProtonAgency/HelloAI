@@ -217,7 +217,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 		$samples = [];
 		$labels = [];
 
-		$type = $request->input('dataset', null) !== null ? 'dataset' : 'sftp';
+		$type = $request->input('dataset') !== null ? 'dataset' : 'sftp';
 		switch ($type) {
 			case 'dataset':
 				$dataset = $request->input('dataset');
@@ -242,7 +242,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 			case 'sftp':
 				$sftp = new SFTP($request->input('sftp.host'));
 
-				if($request->input('sftp.password', null) !== null)
+				if($request->input('sftp.password') !== null)
 				{
 					$login = $sftp->login(
 						$request->input('sftp.username'), 
