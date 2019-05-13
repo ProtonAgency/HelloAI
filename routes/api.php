@@ -24,7 +24,7 @@ Route::group(['middleware' => 'auth.jwt', 'prefix' => 'v1'], function() {
 	// model routes
 	Route::post('models/new', 'V1\ApiController@createModel');
 	Route::get('models/list', 'V1\ApiController@listModels');
-	Route::post('models/{identifier}/fetch', 'V1\ApiController@fetchModel');
+	Route::get('models/{identifier}/fetch', 'V1\ApiController@fetchModel');
 	Route::post('models/{identifier}/update', 'V1\ApiController@updateModel');
 	Route::post('models/{identifier}/delete', 'V1\ApiController@deleteModel');
 	Route::post('models/{identifier}/train', 'V1\ApiController@trainModel');
