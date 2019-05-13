@@ -2,6 +2,7 @@
 namespace App\Http\Controllers\V1;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 use App\Analysis\TextAnalysis;
 use App\ArtificalIntelligence;
@@ -20,10 +21,18 @@ class ApiController extends \App\Http\Controllers\Controller {
 	 */
 	public function createModel(Request $request)
 	{
-		$request->validate([
+		$validator = Validator::make([
 			'name' => 'required|string',
 			'type' => 'required|string',
 		]);
+
+		if($validator->fails())
+		{    
+		    return response()->json([
+		    	'success' => false,
+		    	'errors' => $validator->messages(),
+		    ]);
+		}
 
 		$types = [
 			'text_analysis',
@@ -118,9 +127,17 @@ class ApiController extends \App\Http\Controllers\Controller {
 	 */
 	public function updateModel(Request $request, string $identifier)
 	{
-		$request->validate([
+		$validator = Validator::make([
 			'name' => 'required|string',
 		]);
+
+		if($validator->fails())
+		{    
+		    return response()->json([
+		    	'success' => false,
+		    	'errors' => $validator->messages(),
+		    ]);
+		}
 
 		$ai = ArtificalIntelligence::where('identifier', $identifier)->get()->first();
 		if($ai === null)
@@ -175,7 +192,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 	public function trainModel(Request $request, string $identifier)
 	{
 		// todo: allow file uploads
-		$request->validate([
+		$validator = Validator::make([
 			// 'dataset' => 'required_without:sftp|array_or_file|bail',
 			'sftp.host' => [
 				'required',
@@ -188,6 +205,14 @@ class ApiController extends \App\Http\Controllers\Controller {
 			'sftp.key' => 'required_without:sftp.password|string|bail',
 			'sftp.directory' => 'required|string|bail',
 		]);
+
+		if($validator->fails())
+		{    
+		    return response()->json([
+		    	'success' => false,
+		    	'errors' => $validator->messages(),
+		    ]);
+		}
 
 		$samples = [];
 		$labels = [];
@@ -335,9 +360,17 @@ class ApiController extends \App\Http\Controllers\Controller {
 	 */
 	public function predictModel(Request $request, string $identifier)
 	{
-		$request->validate([
+		$validator = Validator::make([
 			'dataset' => 'required|array',
 		]);
+
+		if($validator->fails())
+		{    
+		    return response()->json([
+		    	'success' => false,
+		    	'errors' => $validator->messages(),
+		    ]);
+		}
 
 		$ai = ArtificalIntelligence::where('identifier', $identifier)->get()->first();
 		if($ai === null)
