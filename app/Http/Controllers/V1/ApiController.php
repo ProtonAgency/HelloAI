@@ -217,7 +217,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 		$samples = [];
 		$labels = [];
 
-		$type = $request->input('dataset', null) === null ? 'dataset' : 'sftp';
+		$type = $request->input('dataset', null) !== null ? 'dataset' : 'sftp';
 		switch ($type) {
 			case 'dataset':
 				$dataset = $request->input('dataset');
