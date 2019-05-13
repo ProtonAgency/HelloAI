@@ -49,13 +49,11 @@ class TextAnalysis {
 		// $transformer->fit($samples);
 		// $transformer->transform($samples);
 
-		// var_dump($split->getTrainLabels(), $split->getTrainSamples()); exit;
-
 		if($this->classifier === null)
 		{
 			$this->classifier = new Pipeline([
-			    new TokenCountVectorizer(new NGramTokenizer(1, 2), new English()),
-			    new TfIdfTransformer()
+			    new TokenCountVectorizer(new NGramTokenizer(1, 3), new English()),
+			    // new TfIdfTransformer(),
 			], new NaiveBayes());
 		}
 
