@@ -15,6 +15,10 @@ class CreateTrainResultsTable extends Migration
     {
         Schema::create('train_results', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('artifical_intelligence_id');
+            $table->integer('index');
+            $table->integer('of');
+            $table->string('accuracy');
             $table->timestamps();
         });
     }
