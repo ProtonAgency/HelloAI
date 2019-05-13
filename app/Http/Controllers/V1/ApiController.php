@@ -21,7 +21,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 	 */
 	public function createModel(Request $request)
 	{
-		$validator = Validator::make([
+		$validator = Validator::make($request->all(), [
 			'name' => 'required|string',
 			'type' => 'required|string',
 		]);
@@ -127,7 +127,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 	 */
 	public function updateModel(Request $request, string $identifier)
 	{
-		$validator = Validator::make([
+		$validator = Validator::make($request->all(), [
 			'name' => 'required|string',
 		]);
 
@@ -192,7 +192,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 	public function trainModel(Request $request, string $identifier)
 	{
 		// todo: allow file uploads
-		$validator = Validator::make([
+		$validator = Validator::make($request->all(), [
 			// 'dataset' => 'required_without:sftp|array_or_file|bail',
 			'sftp.host' => [
 				'required',
@@ -360,7 +360,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 	 */
 	public function predictModel(Request $request, string $identifier)
 	{
-		$validator = Validator::make([
+		$validator = Validator::make($request->all(), [
 			'dataset' => 'required|array',
 		]);
 
