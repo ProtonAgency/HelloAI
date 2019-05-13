@@ -24,7 +24,7 @@ class TextAnalysis {
 	/**@var array[] */
 	protected $labels = [];
 
-	/**@var Svc */
+	/**@var Pipeline */
 	protected $classifier;
 
 	public function __construct(array $dataset, array $labels, ?Pipeline $classifier = null)
