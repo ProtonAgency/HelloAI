@@ -199,7 +199,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 				new Host,
 				'bail',
 			],
-			'sftp.post' => 'required|integer|bail',
+			'sftp.port' => 'required|integer|bail',
 			'sftp.username' => 'required|string|bail',
 			// 'sftp.password' => 'required_without:sftp.key|string|bail',
 			'sftp.key' => 'required_without:sftp.password|string|bail',
