@@ -4,7 +4,7 @@ namespace App\Http\Controllers\V1;
 use Illuminate\Http\Request;
 
 use App\Analysis\TextAnalysis;
-use App\ArtificialIntellegence;
+use App\ArtificalIntelligence;
 use App\Rules\Host;
 
 use phpseclib\Net\SFTP;
@@ -37,7 +37,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 			]);
 		}
 
-		$ai = ArtificialIntellegence::create([
+		$ai = ArtificalIntelligence::create([
 			'name' => $request->input('name'),
 			'type' => $request->input('type'),
 			'identifier' => str_random(32),
@@ -84,7 +84,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 	 */
 	public function listModels(Request $request, string $identifier)
 	{
-		$ai = ArtificialIntellegence::where('identifier', $identifier)->get()->first();
+		$ai = ArtificalIntelligence::where('identifier', $identifier)->get()->first();
 		if($ai === null)
 		{
 			return response()->json([
@@ -112,7 +112,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 			'name' => 'required|string',
 		]);
 
-		$ai = ArtificialIntellegence::where('identifier', $identifier)->get()->first();
+		$ai = ArtificalIntelligence::where('identifier', $identifier)->get()->first();
 		if($ai === null)
 		{
 			return response()->json([
@@ -139,7 +139,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 	 */
 	public function deleteModel(Request $request, string $identifier)
 	{
-		$ai = ArtificialIntellegence::where('identifier', $identifier)->get()->first();
+		$ai = ArtificalIntelligence::where('identifier', $identifier)->get()->first();
 		if($ai === null)
 		{
 			return response()->json([
@@ -274,7 +274,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 			break;
 		}
 
-		$ai = ArtificialIntellegence::where('identifier', $identifier)->get()->first();
+		$ai = ArtificalIntelligence::where('identifier', $identifier)->get()->first();
 		if($ai === null)
 		{
 			return response()->json([
@@ -330,7 +330,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 			'dataset' => 'required|array',
 		]);
 
-		$ai = ArtificialIntellegence::where('identifier', $identifier)->get()->first();
+		$ai = ArtificalIntelligence::where('identifier', $identifier)->get()->first();
 		if($ai === null)
 		{
 			return response()->json([
@@ -366,7 +366,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 	 */
 	public function isTrainingModel(Request $request, $identifier)
 	{
-		$ai = ArtificialIntellegence::where('identifier', $identifier)->get()->first();
+		$ai = ArtificalIntelligence::where('identifier', $identifier)->get()->first();
 		if($ai === null)
 		{
 			return response()->json([
