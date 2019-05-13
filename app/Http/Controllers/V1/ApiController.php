@@ -44,10 +44,10 @@ class ApiController extends \App\Http\Controllers\Controller {
 			'user_id' => $request->user()->id,
 		]);
 
-		// $latest_train = $ai->trainresults()->orderBy('created_at', 'desc')->first();
+		$latest_train = $ai->trainresults()->orderBy('created_at', 'desc')->first();
 
-		// $ai->training = $latest_train === null || $latest_train->index === $latest_train->of;
-		// $ai->accuracy = $latest_train !== null || $latest_train->index !== $latest_train->of ? $latest_train->accuracy : 0;
+		$ai->training = $latest_train === null || false : ($latest_train->index === $latest_train->of);
+		$ai->accuracy = $latest_train === null || 0 : ($latest_train->index !== $latest_train->of ? $latest_train->accuracy : 0);
 
 		// if accuracy === 0 then it hasn't been trained or not enough data
 		return response()->json([
@@ -66,8 +66,8 @@ class ApiController extends \App\Http\Controllers\Controller {
 	{
 		$latest_train = $ai->trainresults()->orderBy('created_at', 'desc')->first();
 
-		$ai->training = $latest_train === null || $latest_train->index === $latest_train->of;
-		$ai->accuracy = $latest_train !== null || $latest_train->index !== $latest_train->of ? $latest_train->accuracy : 0;
+		$ai->training = $latest_train === null || false : ($latest_train->index === $latest_train->of);
+		$ai->accuracy = $latest_train === null || 0 : ($latest_train->index !== $latest_train->of ? $latest_train->accuracy : 0);
 
 		// if accuracy === 0 then it hasn't been trained or not enough data
 		return response()->json([
