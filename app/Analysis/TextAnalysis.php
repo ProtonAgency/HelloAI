@@ -53,7 +53,7 @@ class TextAnalysis {
 		{
 			$this->classifier = new Pipeline([
 			    new TokenCountVectorizer(new NGramTokenizer(1, 3), new English()),
-			    new TfIdfTransformer(),
+			    // new TfIdfTransformer(),
 			], new NaiveBayes());
 		}
 
