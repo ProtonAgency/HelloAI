@@ -55,6 +55,7 @@ class TrainModel implements ShouldQueue
             $svc = unserialize($this->model->export, [\Phpml\Estimator::class]);
         }
 
+        // todo: add a method that returns the class
         $type = '\App\Analysis\\' . str_replace(' ', '', ucwords(strtr($this->model->type, '_', ' ')));
         $trainer = new $type($this->dataset, $this->labels, $svc);
         $accuracy = $trainer->train();

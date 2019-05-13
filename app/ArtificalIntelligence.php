@@ -34,11 +34,11 @@ class ArtificalIntelligence extends Model
         for($i = 0; $i < count($datasets); $i++) { 
             // short statement? $now ? ... : ... ;
             if($now) {
-                dispatch(new \App\Jobs\TrainModel($this, $datasets[$i], $labels[i]), $i, count($datasets));
+                dispatch(new \App\Jobs\TrainModel($this, $datasets[$i], $labels[$i]), $i, count($datasets));
             }
             else
             {
-                dispatch_now(new \App\Jobs\TrainModel($this, $datasets[$i], $labels[i]), $i, count($datasets));
+                dispatch_now(new \App\Jobs\TrainModel($this, $datasets[$i], $labels[$i]), $i, count($datasets));
             }
         }
     }
