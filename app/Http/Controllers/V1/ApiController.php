@@ -306,7 +306,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 				$labels = $new_labels;
 				$dataset = $dataset;
 
-				var_dump(count($labels), ($dataset)); exit;
+				var_dump(count($labels), count($dataset)); exit;
 			break;
 		}
 
