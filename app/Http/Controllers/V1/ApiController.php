@@ -283,6 +283,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 					}
 				}
 
+				dd($labels); exit; exit;
 
 				$dataset = [];
 				$new_labels = [];
