@@ -4,7 +4,7 @@ namespace App\Http\Controllers\V1;
 use Illuminate\Http\Request;
 
 use App\Analysis\TextAnalysis;
-use App\ArtificalIntelligence as ArtificialIntelligence;
+use App\ArtificialIntellegence;
 use App\Rules\Host;
 
 use phpseclib\Net\SFTP;
