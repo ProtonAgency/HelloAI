@@ -71,7 +71,6 @@ return [
     */
 
     'middleware' => [
-        'jwt.auth',
         Authenticate::class,
         DispatchServingNovaEvent::class,
         BootTools::class,
