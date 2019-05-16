@@ -35,7 +35,7 @@
                                 </tr>
                                 <tr>
                                     <th>Status:</th>
-                                    <td>{{ $model->getStatus() }}</td>
+                                    <td>{{ $model->getTextStatus() }}</td>
                                 </tr>
                                 <tr>
                                     <th>Accuracy:</th>
