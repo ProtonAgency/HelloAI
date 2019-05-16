@@ -9,15 +9,6 @@
     <link rel="stylesheet" href="/css/swiper.css">
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900" rel="stylesheet">
-
-    <style type="text/css">
-        .disabled {
-            color: currentColor;
-            cursor: not-allowed;
-            opacity: 0.5;
-            text-decoration: none;
-        }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -31,7 +22,7 @@
                     <li><a href="#features" class="header-link">FEATURES</a></li>
                     <li><a href="#pricing" class="header-link">PRICING</a></li>
                     <li><a href="#support" class="header-link">CONTACT</a></li>
-                    <li class="header__btn header__btn--login disabled"><a href="#">LOGIN</a></li>
+                    <li class="header__btn header__btn--login"><a href="{{ route('login') }}">LOGIN</a></li>
                 </ul>
             </nav>
         </div>
@@ -45,7 +36,7 @@
                     <div class="intro__subtitle">A simple yet powerful cloud based AI platform.</div>
                     <div class="intro__buttons intro__buttons--centered">
                         <a href="#" class="btn btn--blue-bg">SEE HOW IT WORKS</a>
-                        <a href="#" class="btn btn--green-bg disabled">START NOW</a>
+                        <a href="{{ route('register') }}" class="btn btn--green-bg">START NOW</a>
                     </div>
                 </div>
             </div>
@@ -335,7 +326,7 @@
                 We believe we have created one of the simplest cloud based AI platforms there is! We'd love to help you build something great or make your existing project even cooler with AI.
             </div>
             <div class="intro__buttons intro__buttons--centered">
-                <a href="#" class="btn btn--green-bg disabled">CREATE AN ACCOUNT</a>
+                <a href="{{ route('register') }}" class="btn btn--green-bg">CREATE AN ACCOUNT</a>
             </div>
         </div>
     </section>
