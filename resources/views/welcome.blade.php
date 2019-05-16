@@ -35,7 +35,7 @@
                     <li><a class="selected header-link" href="#intro">HOME</a></li>
                     <li><a href="#features" class="header-link">FEATURES</a></li>
                     <li><a href="#pricing" class="header-link">PRICING</a></li>
-                    <li><a href="#testimonials" class="header-link">Testimonials</a></li>
+                    <li><a href="#testimonials" class="header-link">TESTIMONIALS</a></li>
                     <li class="header__btn header__btn--login"><a href="{{ route('login') }}">LOGIN</a></li>
                 </ul>
             </nav>
