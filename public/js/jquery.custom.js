@@ -13,7 +13,6 @@ $(document).ready(function () {
 		$(".pricing__value").removeClass('pricing__value--hidden');
 		$(".pricing__value").toggleClass('pricing__value--show pricing__value--hide');	
 	});
-
 	
 	// Modal login and signup
 	$('.modal-toggle').on('click', function(e) {
