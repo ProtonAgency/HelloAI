@@ -71,6 +71,7 @@ return [
     */
 
     'middleware' => [
+        'web',
         Authenticate::class,
         DispatchServingNovaEvent::class,
         BootTools::class,
