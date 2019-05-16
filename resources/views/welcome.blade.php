@@ -66,7 +66,7 @@
                 <div class="grid__item">
                     <div class="grid__icon"><img src="images/icons/icons-64/meter-64.png" alt="" title=""/></div>
                     <h3 class="grid__title"><span>Powerful</span></h3>
-                    <p class="grid__text">HelloAI is built on of a very powerful cloud network.</p>
+                    <p class="grid__text">HelloAI is built on of a very powerful cloud network made up of micro-containers all over the world to ensure your model is always online.</p>
                 </div>
                 <div class="grid__item">
                     <div class="grid__icon"><img src="images/icons/icons-64/security-64.png" alt="" title=""/></div>
