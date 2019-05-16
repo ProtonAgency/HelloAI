@@ -346,16 +346,15 @@
                     <h3 class="grid__title grid__title--footer-logo">
                         HelloAI
                     </h3>
-                    <p class="grid__text grid__text--copyright">Copyright &copy; 2019 HelloAI a product of <a href="https://lynndigital.com">Lynn Digital LLC</a> and <a href="https://hellosoftware.co">HelloSoftware</a>. All Rights Reserved. </p>
+                    <p class="grid__text grid__text--copyright">Copyright &copy; 2019 HelloAI a product of <a href="https://lynndigital.com">Lynn Digital LLC & HelloSoftware</a>. All Rights Reserved. Proudly made in the US</p>
                     <ul class="grid__list grid__list--sicons">
                         <li><a href="https://twitter.com/hellosoftwareai"><img src="images/social/black/twitter.png" alt="" title=""/></a></li>
                     </ul>
                 </div>
                 <div class="grid__item">
-                    <h3 class="grid__title grid__title--footer">Company</h3>
+                    <h3 class="grid__title grid__title--footer">Legal</h3>
                     <ul class="grid__list grid__list--fmenu">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Carrers</a></li>
+                        <li><a href="https://lynndigital.com">Company</a></li>
                     </ul>
                 </div>
                 <div class="grid__item">
