@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900" rel="stylesheet">
 
+    <link rel="icon" type="image/png" href="/logo.png" />
+
     <style type="text/css">
         .grid__client-logo {
             -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
