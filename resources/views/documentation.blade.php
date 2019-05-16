@@ -9,7 +9,7 @@
                     <h2>HelloAI API Documentation v1</h2>
 
                     <p>
-                        HelloAI has one primary base endpoint for all authentication and api endpoints. <code>https://ai.hellosoftware.co/api/</code>. All endpoints have a code example in PHP and NodeJS. We reccomend that PHP users use the GuzzlePHP library for making HTTP requests.
+                        HelloAI has one primary base endpoint for all authentication and api endpoints. <code>https://ai.hellosoftware.co/api/</code>. All endpoints have a code example in PHP and NodeJS. We reccomend that PHP users use the GuzzlePHP library for making HTTP requests. All endpoints will return a JSON object.
                     </p>
 
                     <h3>Authentication</h3>
