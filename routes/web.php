@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/docs', function () {
+    return view('documentation');
+});
+
 Auth::routes();
 	
 Route::group(['middleware' => ['web', 'auth']], function() {
