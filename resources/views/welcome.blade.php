@@ -221,7 +221,7 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
                     </ul>
                     <a class="pricing__signup" href="{{ route('register', ['plan' => 'starter']) }}">Sign up</a> 
                 </div>
-                <div class="pricing__plan pricing__plan">
+                <div class="pricing__plan">
                     <h3 class="pricing__title">PRO</h3>
                     <div class="pricing__values">
                         <div class="pricing__value pricing__value--show"><span>$</span>49 <b>/ month</b></div>
