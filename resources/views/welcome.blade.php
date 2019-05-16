@@ -219,7 +219,7 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
                         <div class="pricing__value pricing__value--show"><span>$</span>29 <b>/ month</b></div>
                     </div>
                     <ul class="pricing__list">
-                        <li><b>5</b> AI Model</li>
+                        <li><b>5</b> AI Models</li>
                         <li><b>5000s</b> Training Time/ model</li>
                         <li><b>1GB</b> Storage Space</li>
                     </ul>
@@ -231,7 +231,7 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
                         <div class="pricing__value pricing__value--show"><span>$</span>49 <b>/ month</b></div>
                     </div>
                     <ul class="pricing__list">
-                        <li><b>Unlimited</b> AI Model</li>
+                        <li><b>Unlimited</b> AI Models</li>
                         <li><b>Unlimited</b> Training Time</li>
                         <li><b>10GB</b> Storage Space</li>
                     </ul>
