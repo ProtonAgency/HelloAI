@@ -57,4 +57,23 @@ class ArtificalIntelligence extends Model
             return 'Idle';
         }
     }
+
+    public function getAccuracy()
+    {
+        $latest_train = $this->trainresults()->orderBy('created_at', 'desc')->first();
+
+        $accuracy = $latest_train === null ? 0 : ($latest_train->index !== $latest_train->of ? $latest_train->accuracy : 0);
+        if($accuracy === 0)
+        {
+            return 'Not Trained';
+        }
+        elseif($accuracy === 1)
+        {
+            return '100%';
+        }
+        else
+        {
+            return round((float)$accuracy * 100 ) . '%';
+        }
+    }
 }

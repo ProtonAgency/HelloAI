@@ -21,6 +21,7 @@
                                 <th>Type</th>
                                 <th>Identifier</th>
                                 <th>Status</th>
+                                <th>Accuracy</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -33,6 +34,7 @@
                                         <code>{{ $model->identifier }}</code>
                                     </td>
                                     <td>{{ $model->getTextStatus() }}</td>
+                                    <td>{{ $model->getAccuracy() }}</td>
                                     <td>
                                         <a href="">
                                             <i class="fa fa-cog"></i>
