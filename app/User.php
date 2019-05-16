@@ -40,7 +40,7 @@ class User extends Authenticatable implements JWTSubject
 
     public function models()
     {
-        return $this->hasMany(\App\ArtificialIntellegence::class)->get();
+        return $this->hasMany(\App\ArtificalIntelligence::class)->get();
     }
 
     public function getJWTIdentifier()
