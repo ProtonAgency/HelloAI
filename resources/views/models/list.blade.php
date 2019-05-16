@@ -14,36 +14,42 @@
             </div>
             <div class="card">
                 <div class="card-body">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Type</th>
-                                <th>Identifier</th>
-                                <th>Status</th>
-                                <th>Accuracy</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach(auth()->user()->models() as $model)
+                    @if(count(auth()->user()->models()) === 0)
+                        <center>
+                            <h4>You haven't created any HelloAI Models! You can create one <a href="{{ route('models.create') }}">here</a>.</h4>
+                        </center>
+                    @else
+                        <table class="table table-bordered">
+                            <thead>
                                 <tr>
-                                    <td>{{ $model->name }}</td>
-                                    <td>{{ $model->type }}</td>
-                                    <td>
-                                        <code>{{ $model->identifier }}</code>
-                                    </td>
-                                    <td>{{ $model->getTextStatus() }}</td>
-                                    <td>{{ $model->getAccuracy() }}</td>
-                                    <td>
-                                        <a href="{{ route('models.view', ['identifier' => $model->identifier]) }}">
-                                            <i class="fa fa-eye"></i>
-                                        </a>
-                                    </td>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Identifier</th>
+                                    <th>Status</th>
+                                    <th>Accuracy</th>
+                                    <th>Action</th>
                                 </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach(auth()->user()->models() as $model)
+                                    <tr>
+                                        <td>{{ $model->name }}</td>
+                                        <td>{{ $model->type }}</td>
+                                        <td>
+                                            <code>{{ $model->identifier }}</code>
+                                        </td>
+                                        <td>{{ $model->getTextStatus() }}</td>
+                                        <td>{{ $model->getAccuracy() }}</td>
+                                        <td>
+                                            <a href="{{ route('models.view', ['identifier' => $model->identifier]) }}">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    @endif
                 </div>
             </div>
         </div>
