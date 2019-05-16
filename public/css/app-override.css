@@ -24,21 +24,21 @@ body {
 }
 
 .nav-link a:hover {
-	color: #CC5DE8 !important;
+	color: #38d9a9 !important;
 }
 
 .active-link {
-	color: #CC5DE8;
+	color: #38d9a9;
 }
 
 .btn-primary {
 	color: white !important;
-	background-color: #CC5DE8 !important;
+	background-color: #38d9a9 !important;
 }
 
 .alert-info {
 	color: white !important;
-	background-color: #CC5DE8 !important;
+	background-color: #38d9a9 !important;
 	text-decoration: none !important;
 }
 
@@ -53,23 +53,23 @@ body {
 }
 
 .fa {
-	color: #CC5DE8 !important;
+	color: #38d9a9 !important;
 }
 
 .form-control:focus {
-  	border-color: #CC5DE8;
+  	border-color: #38d9a9;
   	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(132, 94, 247, 1);
 }
 
 .btn-primary:focus {
-  	border-color: #CC5DE8;
+  	border-color: #38d9a9;
   	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(132, 94, 247, 1);
 }
 
 .btn-primary {
-	border-color: #CC5DE8;
+	border-color: #38d9a9;
 }
 
 .btn-primary:hover {
-	border-color: #CC5DE8;
+	border-color: #38d9a9;
 }

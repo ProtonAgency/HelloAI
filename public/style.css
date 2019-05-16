@@ -255,10 +255,10 @@ h6{
 }
 .header__menu > ul > li.header__btn--signup > a { 
 	color:#fff; 
-	background-color:#CC5DE8;
+	background-color:#38d9a9;
 	padding:0 22px; 
 	margin:19px 0 0 25px;
-	border:1px #CC5DE8 solid;
+	border:1px #38d9a9 solid;
 }
 .header__menu > ul > li.header__btn--login > a {
 	color:#001f84; 
@@ -268,21 +268,21 @@ h6{
 }
 .header__menu ul li.header__btn--signup > a:hover{
 	background-color:#fff; 
-	border:1px #CC5DE8 solid;
-	color:#CC5DE8;
+	border:1px #38d9a9 solid;
+	color:#38d9a9;
 }
 .header__menu ul li.header__btn--login > a:hover{
 	background-color:#001f84; 
 	color:#fff;
 }
 .header__menu ul li  a:hover, .header__menu ul li a.selected , .header__menu ul li a.active{
-	color: #CC5DE8;
+	color: #38d9a9;
 }
 .header__menu ul li.header__btn--signup a.active { 
 	color:#fff; 
 }
 .header__menu ul li.header__btn--login a.active {
-	color:#CC5DE8; 
+	color:#38d9a9; 
 }
 .header__menu ul li:hover{
 	cursor:pointer;
@@ -340,7 +340,7 @@ h6{
   font-size:14px;
   line-height:45px; height:45px;
 }
-.header__menu ul ul li a:hover{ color: #CC5DE8; }
+.header__menu ul ul li a:hover{ color: #38d9a9; }
 .header__menu ul ul li:last-child a {
  border-bottom:none; 
  }
@@ -721,19 +721,19 @@ h6{
 }
 .btn--green-bg{
 	color:#fff;
-	background-color:#CC5DE8;
-	border:2px #CC5DE8 solid;
+	background-color:#38d9a9;
+	border:2px #38d9a9 solid;
 }
 .btn--green-bg:hover{
-	color:#CC5DE8;
+	color:#38d9a9;
 	background:none;
 }
 .btn--green-border{ 
-	color:#CC5DE8; 
-	border:1px #CC5DE8 solid;
+	color:#38d9a9; 
+	border:1px #38d9a9 solid;
 }
 .btn--green-border:hover{ 
-	background-color:#CC5DE8; 
+	background-color:#38d9a9; 
 	color:#fff;
 }
 .btn--red-bg{
@@ -775,7 +775,7 @@ h6{
 }
 .intro__title span{
 	font-weight:700;
-	color:#CC5DE8;
+	color:#38d9a9;
 }
 .intro__subtitle{
 	padding:0 0 40px 0;
@@ -790,7 +790,7 @@ h6{
 }
 .intro__description span{
 	font-weight:300;
-	color:#CC5DE8;
+	color:#38d9a9;
 	font-size:30px;
 }
 .intro__buttons{
@@ -852,7 +852,7 @@ svg.svg-intro-animation {
   display: block;
   width: 50px;
   height: 50px;
-  background: #CC5DE8;
+  background: #38d9a9;
   border-radius: 50%;
   animation: pulse-border 1500ms ease-out infinite;
 }
@@ -867,7 +867,7 @@ svg.svg-intro-animation {
   display: block;
   width: 50px;
   height: 50px;
-  background: #CC5DE8;
+  background: #38d9a9;
   border-radius: 50%;
   transition: all 200ms;
 }
@@ -956,7 +956,7 @@ svg.svg-features-bottom {
 	transition: all .3s ease-out;
 }
 .grid--features .grid__item:hover{
-	 background-color:#CC5DE8;
+	 background-color:#38d9a9;
 	 color:#fff;
 	 box-shadow: 0 0 30px 0px rgba(0,0,0,0.18);
 	-moz-box-shadow: 0 0 30px 0px rgba(0,0,0,0.18);
@@ -1151,7 +1151,7 @@ svg.svg-features-bottom {
 	height: 0;
 	border-style: solid;
 	border-width: 100px 100px 0 0;
-	border-color: #CC5DE8 transparent transparent transparent;
+	border-color: #38d9a9 transparent transparent transparent;
 	position:absolute;
 	top:0px;
 	left:0px;
@@ -1336,11 +1336,11 @@ svg.svg-features-bottom {
  }
 .pricing__plan--popular .pricing__signup{
 	color:#fff;
-	background-color:#CC5DE8;
-	border:2px #CC5DE8 solid;
+	background-color:#38d9a9;
+	border:2px #38d9a9 solid;
  }
 .pricing__plan--popular .pricing__signup:hover{
-	color:#CC5DE8;
+	color:#38d9a9;
 	background:none;
  }
 
@@ -1391,7 +1391,7 @@ svg.svg-features-bottom {
     margin: auto;
     width: 60%;
     height: 4px;
-    background: #CC5DE8;
+    background: #38d9a9;
 }
 .hiw-content__slide{
 	background-color: #f7f8f9;
@@ -1407,7 +1407,7 @@ svg.svg-features-bottom {
 }
 .hiw-content__slide pre strong{
 	font-weight:700;
-	color:#CC5DE8;
+	color:#38d9a9;
 }
 .hiw-buttons{
 	width:100%;
@@ -1627,7 +1627,7 @@ svg.svg-features-bottom {
 	width:0px;
 	height:2px;
 	z-index:22;
-	background-color:#CC5DE8;
+	background-color:#38d9a9;
 	-webkit-transition:all 0.3s 0.12s;
 	transition: all 0.3s 0.12s;
 }
@@ -1979,7 +1979,7 @@ transition: all 0.3s 0.12s;
   background-color:#001f84;
 }
 .modal__content--signup{
-  background-color:#CC5DE8;
+  background-color:#38d9a9;
 }
 .modal__info{
 	width:34%;
@@ -2036,9 +2036,9 @@ transition: all 0.3s 0.12s;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
-	color: #CC5DE8;
+	color: #38d9a9;
 	background-color:transparent;
-	border: 2px #CC5DE8 solid;
+	border: 2px #38d9a9 solid;
 	cursor:pointer;
 	font-weight:700;
 }
@@ -2120,7 +2120,7 @@ transition: all 0.3s 0.12s;
     transition: all 0.3s ease;
 }
 .modal__switch--forgot:hover{
-	color:#CC5DE8;
+	color:#38d9a9;
 }
 
 .modal__close {

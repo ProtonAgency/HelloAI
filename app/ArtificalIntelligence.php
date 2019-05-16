@@ -42,4 +42,9 @@ class ArtificalIntelligence extends Model
             }
         }
     }
+
+    public function getTextStatus()
+    {
+
+    }
 }
