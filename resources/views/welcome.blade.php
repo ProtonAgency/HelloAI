@@ -285,7 +285,7 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
         </div>
     </section>
     <!-- Section -->
-    <section class="section section--clients" id="clients">
+<!--     <section class="section section--clients" id="clients">
         <div class="section__content section__content--fix-width">
             <div class="grid grid--5col">
                 <div class="grid__item">
@@ -293,7 +293,7 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Section -->
     <section class="section section--cta" id="cta">
         <div class="section__content section__content--fix-width section__content--padding">
