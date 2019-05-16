@@ -46,7 +46,7 @@
     <section class="section section--intro-animation">
         <div class="section__content section__content--fix-width">
             <div class="intro-animation" data-paroller-factor="0.4" data-paroller-type="foreground" data-paroller-direction="vertical">
-                <div class="animation__play modal-toggle" data-openpopup="animation"><span></span></div>
+                <!-- <div class="animation__play modal-toggle" data-openpopup="animation"><span></span></div> -->
                 <!-- <img src="images/intro-animation.png" alt="" title=""/> -->
             </div>
         </div>
