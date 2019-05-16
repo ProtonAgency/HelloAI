@@ -207,6 +207,18 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
                         <div class="pricing__value pricing__value--show"><span>$</span>14 <b>/ month</b></div>
                     </div>
                     <ul class="pricing__list">
+                        <li><b>1</b> AI Model</li>
+                        <li><b>5000s</b> Training Time</li>
+                        <li><b>1GB</b> Storage Space</li>
+                    </ul>
+                    <a class="pricing__signup" href="{{ route('register', ['plan' => 'starter']) }}">Sign up</a> 
+                </div>
+                <div class="pricing__plan">
+                    <h3 class="pricing__title">STARTER</h3>
+                    <div class="pricing__values">
+                        <div class="pricing__value pricing__value--show"><span>$</span>29 <b>/ month</b></div>
+                    </div>
+                    <ul class="pricing__list">
                         <li><b>5</b> AI Model</li>
                         <li><b>5000s</b> Training Time/ model</li>
                         <li><b>1GB</b> Storage Space</li>
@@ -214,7 +226,7 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
                     <a class="pricing__signup" href="{{ route('register', ['plan' => 'starter']) }}">Sign up</a> 
                 </div>
                 <div class="pricing__plan">
-                    <h3 class="pricing__title">PRO</h3>
+                    <h3 class="pricing__title">UNLIMITED</h3>
                     <div class="pricing__values">
                         <div class="pricing__value pricing__value--show"><span>$</span>49 <b>/ month</b></div>
                     </div>
@@ -223,7 +235,7 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
                         <li><b>Unlimited</b> Training Time</li>
                         <li><b>10GB</b> Storage Space</li>
                     </ul>
-                    <a class="pricing__signup" href="{{ route('register', ['plan' => 'starter']) }}">Sign up</a>
+                    <a class="pricing__signup" href="{{ route('register', ['plan' => 'unlimited']) }}">Sign up</a>
                 </div>
             </div>
             <div class="clear"></div>
