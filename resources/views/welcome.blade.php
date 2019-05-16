@@ -358,7 +358,7 @@
                     </ul>
                 </div>
                 <div class="grid__item">
-                    <h3 class="grid__title grid__title--footer">Products</h3>
+                    <h3 class="grid__title grid__title--footer">Links</h3>
                     <ul class="grid__list grid__list--fmenu">
                         <li><a href="#">Integrations</a></li>
                         <li><a href="#">API</a></li>
