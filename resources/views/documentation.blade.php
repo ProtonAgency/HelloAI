@@ -15,7 +15,7 @@
                     <h3>Authentication</h3>
 
                     <p>
-                        HelloAI uses JWT (JSON Web Token) based authentication. You can create an account, login, and fetch your account details via the API.
+                        HelloAI uses JWT (JSON Web Token) based authentication. You can login and fetch your account details via the API.
                     </p>
 
                     <h4>Login</h4>
@@ -40,7 +40,7 @@ $auth_request = $client->post('https://ai.hellosoftware.co/api/auth/login', [
                         </code>
 
                         <b>Example Response:</b>
-                        
+
                         <code>
 <pre>
 {
@@ -49,6 +49,77 @@ $auth_request = $client->post('https://ai.hellosoftware.co/api/auth/login', [
     "expires_in":3600
 }
 </pre>
+                        </code>
+                    </p>
+
+                    <h3>Models</h3>
+
+                    <h4>Create a new Model</h4>
+
+                    <p>
+                        <b>Endpoint:</b> <code>/v1/models/new</code>
+
+                        <b>Example Request:</b>
+
+                        <code>
+<pre>
+$token = ...;
+$model_request = $client->post('https://ai.hellosoftware.co/api/v1/models/new', [
+    'form_params' => [
+        'name' => 'my model', //model name
+        'type' => 'text_analysis', //no other type is supported right now
+    ],
+    'headers' => [
+        'Authorization' => 'Bearer ' . $token,
+    ],
+]);
+</pre>
+                        </code>
+
+                        <b>Example Response:</b>
+
+                        <code>
+<pre>
+    
+</pre>
+                        </code>
+                    </p>
+
+                    <h4>Train a Model</h4>
+
+                    <p>
+                        <b>Endpoint:</b> <code>/v1/models/{identifier}/train</code>
+
+                        <b>Example Request:</b>
+
+                        <code>
+<pre>
+$token = ...;
+$identifier = ...;
+$model_train = $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/train', [
+    'form_params' => [
+        'sftp' => [
+            'host' => '127.0.0.1',
+            'port' => 22,
+            'username' => 'helloai',
+            // 'password' => '...'
+            'key' => file_get_contents('/path/to/ssh/key'),
+            'directory' => '/path/to/dataset'
+        ],
+    ],
+    'headers' => [
+        'Authorization' => 'Bearer ' . $token,
+    ],
+]);
+</pre>
+
+                        <b>Example Response:</b>
+
+                        <code>
+<pre>
+    
+</pre>
+                        </code>
                         </code>
                     </p>
                 </div>
