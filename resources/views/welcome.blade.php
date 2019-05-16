@@ -35,7 +35,7 @@
                     <div class="intro__title">Say Hello to <span>AI</span></div>
                     <div class="intro__subtitle">A simple yet powerful cloud based AI platform.</div>
                     <div class="intro__buttons intro__buttons--centered">
-                        <a href="#" class="btn btn--blue-bg">SEE HOW IT WORKS</a>
+                        <a href="#hiw" class="btn btn--blue-bg">SEE HOW IT WORKS</a>
                         <a href="{{ route('register') }}" class="btn btn--green-bg">START NOW</a>
                     </div>
                 </div>
