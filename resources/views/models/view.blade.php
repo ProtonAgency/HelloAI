@@ -20,7 +20,7 @@
                         <div class="card-body">
                             <h3>Model Information</h3>
 
-                            <table class="table">
+                            <table class="table table-borderless">
                                 <tr>
                                     <th>Name:</th>
                                     <td>{{ $model->name }}</td>
