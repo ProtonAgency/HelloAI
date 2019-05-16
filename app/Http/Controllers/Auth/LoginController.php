@@ -36,9 +36,4 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-
-    protected function guard()
-    {
-        return auth()->guard('admins');
-    }
 }
