@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard/{any}', function () {
-    return view('application');
-})->where('any', '.*');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

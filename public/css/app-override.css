@@ -1,0 +1,75 @@
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	padding: 0;
+	font-size: 16px;
+	margin: 0 auto;
+	color: #1d1d1d;
+	background-color: #f7f7f7;
+	font-weight: 400;
+}
+
+.navbar-brand {
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #231f20;
+	font-weight: 600;
+}
+
+.navbar {
+	height: 70px;
+}
+
+.nav-link {
+	color: #231f20 !important;
+	font-size: 16px;
+}
+
+.nav-link a:hover {
+	color: #CC5DE8 !important;
+}
+
+.active-link {
+	color: #CC5DE8;
+}
+
+.btn-primary {
+	color: white !important;
+	background-color: #CC5DE8 !important;
+}
+
+.alert-info {
+	color: white !important;
+	background-color: #CC5DE8 !important;
+	text-decoration: none !important;
+}
+
+.link-dark {
+	color: white;
+	text-decoration: none;
+}
+
+.link-dark a:hover {
+	color: white !important;
+	text-decoration: none !important;
+}
+
+.fa {
+	color: #CC5DE8 !important;
+}
+
+.form-control:focus {
+  	border-color: #CC5DE8;
+  	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(132, 94, 247, 1);
+}
+
+.btn-primary:focus {
+  	border-color: #CC5DE8;
+  	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(132, 94, 247, 1);
+}
+
+.btn-primary {
+	border-color: #CC5DE8;
+}
+
+.btn-primary:hover {
+	border-color: #CC5DE8;
+}
