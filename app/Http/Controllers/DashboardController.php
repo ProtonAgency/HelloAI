@@ -45,6 +45,6 @@ class DashboardController extends Controller
 			'user_id' => $request->user()->id,
 		]);
 
-		return response()->route('models', ['popup' => 'Model with identifier ' . $ai->identifier . ' created!'])
+		return response()->route('models', ['popup' => 'Model with identifier ' . $ai->identifier . ' created!']);
     }
 }
