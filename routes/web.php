@@ -15,7 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Auth::routes();
+	
+Route::group(['middleware' => ['web', 'auth']], function() {
+	Route::get('/logout', 'Auth\LoginController@logout');
 
-Route::get('/home', 'HomeController@index')->name('home');
+	Route::get('/home', function() {
+		return redirect()->route('models');
+	});
+
+	Route::get('/models', 'DashboardController@viewModels')->name('models');
+
+	Route::get('/models/create', 'DashboardController@createModel')->name('models.create');
+	Route::post('/models/create', 'DashboardController@handleCreateModel');
+});
