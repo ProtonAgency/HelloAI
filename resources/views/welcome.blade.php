@@ -103,7 +103,7 @@
                 <div class="hiw-content">
                     <div class="hiw-content__wrapper swiper-wrapper">
                         <div class="hiw-content__slide swiper-slide">
-                            <pre>
+<pre>
 // ....
 
 //$token = ...;
@@ -116,10 +116,10 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/new', [
         'Authorization' => 'Bearer ' . $token,
     ],
 ]);
-                                            </pre>
+</pre>
                         </div>
                         <div class="hiw-content__slide swiper-slide">
-                            <pre>
+<pre>
 // ....
 
 //$token = ...;
@@ -141,10 +141,10 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
         'Authorization' => 'Bearer ' . $token,
     ],
 ]);
-                                            </pre>
+</pre>
                         </div>
                         <div class="hiw-content__slide swiper-slide">
-                            <pre>
+<pre>
 // ....
 
 //$token = ...;
@@ -157,13 +157,12 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
         'Authorization' => 'Bearer ' . $token,
     ],
 ]);
-                                            </pre>
+</pre>
                         </div>
                     </div>
                 </div>
                 <div class="hiw-buttons">
                     <button class="btn btn--green-bg">GET THE CODE</button>
-                    <button class="btn btn--blue-bg">RUN EXAMPLE</button>
                 </div>
             </div>
         </div>
