@@ -29,7 +29,9 @@
                                 <tr>
                                     <td>{{ $model->name }}</td>
                                     <td>{{ $model->type }}</td>
-                                    <td>{{ $model->identifier }}</td>
+                                    <td>
+                                        <code>{{ $model->identifier }}</code>
+                                    </td>
                                     <td>
                                         <!-- todo -->
                                     </td>
