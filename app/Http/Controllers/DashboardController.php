@@ -50,12 +50,25 @@ class DashboardController extends Controller
 
     public function viewModel(Request $request, string $identifier)
     {
-    	$ai = ArtificalIntelligence::where('identifier', $identifier)->get()->first();
-    	if($ai === null)
-    	{
-    		return redirect()->back();
-    	}
+        $ai = ArtificalIntelligence::where('identifier', $identifier, 'user_id', $request->user()->id)->get()->first();
+        if($ai === null)
+        {
+            return redirect()->back();
+        }
 
-    	return view('models.view')->with('model', $ai);
+        return view('models.view')->with('model', $ai);
+    }
+
+    public function deleteModel(Request $request, string $identifier)
+    {
+        $ai = ArtificalIntelligence::where('identifier', $identifier, 'user_id', $request->user()->id)->get()->first();
+        if($ai === null)
+        {
+            return redirect()->back();
+        }
+
+        $ai->delete();
+
+        return redirect()->route('models');
     }
 }

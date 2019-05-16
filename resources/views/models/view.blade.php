@@ -42,6 +42,10 @@
                                     <td>{{ $model->getAccuracy() }}</td>
                                 </tr>
                             </table>
+
+                            <a class="btn btn-danger" href="{{ route('models.delete', ['identifier' => $model->identifier]) }}">
+                                <i class="fa fa-trash"></i> Delete
+                            </a>
                         </div>
                     </div>                
                 </div>

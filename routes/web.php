@@ -30,6 +30,8 @@ Route::group(['middleware' => ['web', 'auth']], function() {
 	Route::post('/models/create', 'DashboardController@handleCreateModel');
 
 	Route::get('/models/{identifier}/view', 'DashboardController@viewModel')->name('models.view');
+
+	Route::get('/models/{identifier}/delete', 'DashboardController@deleteModel')->name('models.delete');
 });
 
 \URL::forceScheme('https');
