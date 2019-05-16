@@ -98,6 +98,12 @@
                         <div class="hiw-titles__slide swiper-slide">
                             <span>Predict against a Model</span>
                         </div>
+                        <div class="hiw-titles__slide swiper-slide">
+                            <span>Predict against a Model</span>
+                        </div>
+                        <div class="hiw-titles__slide swiper-slide">
+                            <span>Predict against a Model</span>
+                        </div>
                     </div>
                 </div>
                 <div class="hiw-content">
