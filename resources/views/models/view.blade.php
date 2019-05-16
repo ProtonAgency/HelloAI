@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="row">
                 <div class="col-md-6 text-left pull-left">
                     <h2>{{ $model->identifier }}</h2>
@@ -42,13 +42,6 @@
                                     <td>{{ $model->getAccuracy() }}</td>
                                 </tr>
                             </table>
-                        </div>
-                    </div>                
-                </div>
-                <div class="col-md-12 mr-2">
-                    <div class="card">
-                        <div class="card-body">
-
                         </div>
                     </div>                
                 </div>
