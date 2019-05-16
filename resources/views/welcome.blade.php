@@ -43,17 +43,17 @@
         </div>
     </section>
     <!-- Section -- intro animation -->
-    <section class="section section--intro-animation">
+<!--     <section class="section section--intro-animation">
         <div class="section__content section__content--fix-width">
             <div class="intro-animation" data-paroller-factor="0.4" data-paroller-type="foreground" data-paroller-direction="vertical">
                 <div class="animation__play modal-toggle" data-openpopup="animation"><span></span></div>
-                <!-- <img src="images/intro-animation.png" alt="" title=""/> -->
+                <img src="images/intro-animation.png" alt="" title=""/>
             </div>
         </div>
         <svg class="svg-intro-animation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
             <path d="M0,70 Q50,50 100,70 L100,100 0,100 Z" fill="#f7f8f9"/>
         </svg>
-    </section>
+    </section> -->
     <!-- Section -- features -->
     <section class="section section--features" id="features">
         <div class="section__content section__content--fluid-width section__content--padding">
