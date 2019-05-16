@@ -201,65 +201,37 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
                         <div class="pricing__value pricing__value--show"><span>$</span>0 <b>/ month</b></div>
                     </div>
                     <ul class="pricing__list">
-                        <li><b>1</b> User Account</li>
-                        <li><b>10</b> Team Members</li>
-                        <li><b>Unlimited</b> Emails Accounts</li>
-                        <li>Set And Manage Permissions</li>
-                        <li class="disabled">API &amp; extension support</li>
-                        <li class="disabled">Developer support</li>
-                        <li class="disabled">A / B Testing</li>
+                        <li><b>1</b> AI Model</li>
+                        <li><b>500s</b> Training Time</li>
+                        <li><b>5MB</b> Storage Space</li>
                     </ul>
-                    <a class="pricing__signup" href="">Sign up</a>
+                    <a class="pricing__signup" href="{{ route('register', ['plan' => 'free']) }}">Sign up</a>
                 </div>
-                <div class="pricing__plan">
-                    <h3 class="pricing__title">STARTUP</h3>
-                    <div class="pricing__values">
-                        <div class="pricing__value pricing__value--show"><span>$</span>29 <b>/ month</b></div>
-                    </div>
-                    <ul class="pricing__list">
-                        <li><b>10</b> User Account</li>
-                        <li><b>100</b> Team Members</li>
-                        <li><b>Unlimited</b> Emails Accounts</li>
-                        <li>Set And Manage Permissions</li>
-                        <li>API &amp; extension support</li>
-                        <li class="disabled">Developer support</li>
-                        <li class="disabled">A / B Testing</li>
-                    </ul>
-                    <a class="pricing__signup" href="">Sign up</a> 
-                </div>
-                <div class="pricing__plan pricing__plan--popular">
+                <div class="pricing__plan--popular">
                     <div class="pricing__badge-bg"></div>
                     <div class="pricing__badge-text">POPULAR</div>
+                    <h3 class="pricing__title">STARTER</h3>
+                    <div class="pricing__values">
+                        <div class="pricing__value pricing__value--show"><span>$</span>14 <b>/ month</b></div>
+                    </div>
+                    <ul class="pricing__list">
+                        <li><b>5</b> AI Model</li>
+                        <li><b>5000s</b> Training Time/ model</li>
+                        <li><b>1GB</b> Storage Space</li>
+                    </ul>
+                    <a class="pricing__signup" href="{{ route('register', ['plan' => 'starter']) }}">Sign up</a> 
+                </div>
+                <div class="pricing__plan pricing__plan">
                     <h3 class="pricing__title">PRO</h3>
                     <div class="pricing__values">
                         <div class="pricing__value pricing__value--show"><span>$</span>49 <b>/ month</b></div>
                     </div>
                     <ul class="pricing__list">
-                        <li><b>50</b> User Account</li>
-                        <li><b>500</b> Team Members</li>
-                        <li><b>Unlimited</b> Emails Accounts</li>
-                        <li>Set And Manage Permis sions</li>
-                        <li>API &amp; extension support</li>
-                        <li>Developer support</li>
-                        <li class="disabled">A / B Testing</li>
+                        <li><b>Unlimited</b> AI Model</li>
+                        <li><b>Unlimited</b> Training Time</li>
+                        <li><b>10GB</b> Storage Space</li>
                     </ul>
-                    <a class="pricing__signup" href="">Sign up</a>
-                </div>
-                <div class="pricing__plan">
-                    <h3 class="pricing__title">ULTRA</h3>
-                    <div class="pricing__values">
-                        <div class="pricing__value pricing__value--show"><span>$</span>99 <b>/ month</b></div>
-                    </div>
-                    <ul class="pricing__list">
-                        <li><b>Unlimited</b> User Account</li>
-                        <li><b>Unlimited</b> Team Members</li>
-                        <li><b>Unlimited</b> Emails Accounts</li>
-                        <li>Set And Manage Permissions</li>
-                        <li>API &amp; extension support</li>
-                        <li>Developer support</li>
-                        <li>A / B Testing</li>
-                    </ul>
-                    <a class="pricing__signup" href="">Sign up</a>
+                    <a class="pricing__signup" href="{{ route('register', ['plan' => 'starter']) }}">Sign up</a>
                 </div>
             </div>
             <div class="clear"></div>
