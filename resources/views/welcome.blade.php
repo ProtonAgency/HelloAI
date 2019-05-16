@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="/css/swiper.css">
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900" rel="stylesheet">
+
+    <style type="text/css">
+        .grid__client-logo {
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);  
+        }
+
+        .grid__client-logo:hover {
+            -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(0%); 
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -252,46 +264,34 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
         </div>
     </section>
     <!-- Section -- testimonials -->
-<!--     <section class="section section--testimonials" id="testimonials">
+    <section class="section section--testimonials" id="testimonials">
         <div class="section__content section__content--fix-width section__content--padding">
             <h2 class="section__title section__title--centered">Success stories</h2>
             <div class="testimonials">
                 <div class="testimonials__content swiper-wrapper">
                     <div class="testimonials__slide swiper-slide">
-                        <div class="testimonials__thumb" data-swiper-parallax="-50%"><img src="images/avatar-1.jpg" alt="" title=""/></div>
+                        <div class="testimonials__thumb" data-swiper-parallax="-50%"><img src="/images/avatar-1.jpg" alt="" title=""/></div>
                         <div class="testimonials__text" data-swiper-parallax="-100%">
-                            <p>"Business is all about the customer: what the customer wants and what they get. Generally, every customer wants a product or service that solves their problem, worth their money, and is delivered with amazing customer service"</p>
+                            <p>"I created HelloAI because I have a passion for machine learning but I had a very difficult time finding beginner resources when I was learning, and I couldn't maintain or afford the infastructure these big AI platforms use."</p>
                         </div>
-                        <div class="testimonials__source">Lason Duvan <a href="#">New York Business Center</a></div>
+                        <div class="testimonials__source">Jake Casto <a href="https://lynndigital.com">Lynn Digital LLC</a></div>
                     </div>
                 </div>
                 <div class="testimonials__pagination swiper-pagination"></div>
             </div>
             <div class="clear"></div>
         </div>
-    </section> -->
+    </section>
     <!-- Section -->
-<!--     <section class="section section--clients" id="clients">
+    <section class="section section--clients" id="clients">
         <div class="section__content section__content--fix-width">
             <div class="grid grid--5col">
                 <div class="grid__item">
-                    <div class="grid__client-logo"><a href="#"><img src="images/clients/clients-logo1.png" alt="" title=""/></a></div>
-                </div>
-                <div class="grid__item">
-                    <div class="grid__client-logo"><a href="#"><img src="images/clients/clients-logo2.png" alt="" title=""/></a></div>
-                </div>
-                <div class="grid__item">
-                    <div class="grid__client-logo"><a href="#"><img src="images/clients/clients-logo3.png" alt="" title=""/></a></div>
-                </div>
-                <div class="grid__item">
-                    <div class="grid__client-logo"><a href="#"><img src="images/clients/clients-logo4.png" alt="" title=""/></a></div>
-                </div>
-                <div class="grid__item">
-                    <div class="grid__client-logo"><a href="#"><img src="images/clients/clients-logo5.png" alt="" title=""/></a></div>
+                    <div class="grid__client-logo"><a href="https://1mb.site"><img src="/images/clients/logo1.png" alt="1mbsite" title=""/></a></div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- Section -->
     <section class="section section--cta" id="cta">
         <div class="section__content section__content--fix-width section__content--padding">
