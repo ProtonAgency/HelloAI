@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="row">
                 <div class="col-md-6 text-left pull-left">
-                    <h2>Model {{ $model->identifier }}</h2>
+                    <h2>{{ $model->identifier }}</h2>
                 </div>
                 <div class="col-md-6 text-right pull-right">
                     <a href="{{ route('models') }}">
@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-6 mr-2">
+                <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">
                             <h3>Model Information</h3>
@@ -45,7 +45,7 @@
                         </div>
                     </div>                
                 </div>
-                <div class="col-md-6 mr-2">
+                <div class="col-md-12 mr-2">
                     <div class="card">
                         <div class="card-body">
 
