@@ -23,7 +23,11 @@ Route::get('/terms', function () {
     return view('legal');
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
+
+Route::get('/register', function() {
+	return redirect()->route('login');
+})->name('register');
 	
 Route::group(['middleware' => ['web', 'auth']], function() {
 	Route::get('/logout', 'Auth\LoginController@logout');
