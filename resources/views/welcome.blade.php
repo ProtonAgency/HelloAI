@@ -84,25 +84,19 @@
         <div class="section__content section__content--fix-width section__content--padding">
             <h2 class="section__title section__title--centered">Easy to use API</h2>
             <div class="section__description section__description--centered">
-                You can get started with these code snippets or you can view our <a href="#">documentation</a>.
+                You can get started with these code snippets or you can view our <a href="/docs">documentation</a>.
             </div>
             <div class="hiw">
                 <div class="hiw-titles">
                     <div class="hiw-titles__wrapper swiper-wrapper">
                         <div class="hiw-titles__slide swiper-slide">
-                            <span>Initializing JS</span>
+                            <span>Create a Model</span>
                         </div>
                         <div class="hiw-titles__slide swiper-slide">
-                            <span>Configuration CSS</span>
+                            <span>Train a Model</span>
                         </div>
                         <div class="hiw-titles__slide swiper-slide">
-                            <span>Security Levels API</span>
-                        </div>
-                        <div class="hiw-titles__slide swiper-slide">
-                            <span>Add Instances</span>
-                        </div>
-                        <div class="hiw-titles__slide swiper-slide">
-                            <span>General API Settings</span>
+                            <span>Predict against a Model</span>
                         </div>
                     </div>
                 </div>
@@ -110,78 +104,59 @@
                     <div class="hiw-content__wrapper swiper-wrapper">
                         <div class="hiw-content__slide swiper-slide">
                             <pre>
-    <strong>$('.modal-toggle').on('click', function(e) {</strong>
-      e.preventDefault();
-      var modalopen = $(this).data("openpopup");
-      $('.modal--'+modalopen).toggleClass('modal--visible');
-      var modaltype = $(this).data("popup");
-      $('.modal__content--'+modaltype).toggleClass('modal__content--visible');
-            $('.modal__switch').on('click', function(e) {
-              $('.modal__content').removeClass('modal__content--visible');
-              var modaltypeb = $(this).data("popup");
-              $('.modal__content--'+modaltypeb).toggleClass('modal__content--visible');
-            });
-    });
-                                            </pre>
-                        </div>
-                        <div class="hiw-content__slide swiper-slide">
-                            <pre>
-    <strong>.hiw-titles__slide{</strong>
-         width: calc(100% / 5);
-         cursor:pointer;
-         padding:30px 0; 
-         margin:0 0 -2px 0;
-         text-align:center;
-         opacity:.4;
-         -webkit-transition: all 1s;
-        -moz-transition: all 1s;
-        transition: all 1s;
-    }
-                                            </pre>
-                        </div>
-                        <div class="hiw-content__slide swiper-slide">
-                            <pre>
-    <strong>$(".input__field").focus(function(){</strong>
-        $(this).parent().addClass('input--filled');
-    });
+// ....
 
-    <strong>$('.input__field').blur(function()</strong>
-    {
-        if( !$(this).val() ) {
-              $(this).parent().removeClass('input--filled');
-        }
-    });
+//$token = ...;
+$client->post('https://ai.hellosoftware.co/api/v1/models/new', [
+    'form_params' => [
+        'name' => 'my model', //model name
+        'type' => 'text_analysis', //no other type is supported right now
+    ],
+    'headers' => [
+        'Authorization' => 'Bearer ' . $token,
+    ],
+]);
                                             </pre>
                         </div>
                         <div class="hiw-content__slide swiper-slide">
                             <pre>
-    <strong>$('.modal-toggle').on('click', function(e) {</strong>
-      e.preventDefault();
-      var modalopen = $(this).data("openpopup");
-      $('.modal--'+modalopen).toggleClass('modal--visible');
-      var modaltype = $(this).data("popup");
-      $('.modal__content--'+modaltype).toggleClass('modal__content--visible');
-            $('.modal__switch').on('click', function(e) {
-              $('.modal__content').removeClass('modal__content--visible');
-              var modaltypeb = $(this).data("popup");
-              $('.modal__content--'+modaltypeb).toggleClass('modal__content--visible');
-            });
-    });
+// ....
+
+//$token = ...;
+//$identifier = ...;
+$client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/train', [
+    'form_params' => [
+        'dataset' => [
+            [
+                "sample spam string", //string
+                "spam", //label
+            ],
+            [
+                "is this a spam string?", //string
+                "not spam", //label
+            ],
+        ],
+    ],
+    'headers' => [
+        'Authorization' => 'Bearer ' . $token,
+    ],
+]);
                                             </pre>
                         </div>
                         <div class="hiw-content__slide swiper-slide">
                             <pre>
-    <strong>.hiw-titles__slide{</strong>
-         width: calc(100% / 5);
-         cursor:pointer;
-         padding:30px 0; 
-         margin:0 0 -2px 0;
-         text-align:center;
-         opacity:.4;
-         -webkit-transition: all 1s;
-        -moz-transition: all 1s;
-        transition: all 1s;
-    }
+// ....
+
+//$token = ...;
+//$identifier = ...;
+$client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/train', [
+    'form_params' => [
+        'dataset' => ['Is this a spam string?'], // pass in an array because helloai allows multiple predictions at once
+    ],
+    'headers' => [
+        'Authorization' => 'Bearer ' . $token,
+    ],
+]);
                                             </pre>
                         </div>
                     </div>
@@ -354,7 +329,7 @@
                         <li><a href="#">Integrations</a></li>
                         <li><a href="#">API</a></li>
                         <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Documentation</a></li>
+                        <li><a href="/docs">Documentation</a></li>
                     </ul>
                 </div>
                 <div class="grid__item">
