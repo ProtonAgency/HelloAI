@@ -98,12 +98,6 @@
                         <div class="hiw-titles__slide swiper-slide">
                             <span>Predict against a Model</span>
                         </div>
-                        <div class="hiw-titles__slide swiper-slide">
-                            <span>Predict against a Model</span>
-                        </div>
-                        <div class="hiw-titles__slide swiper-slide">
-                            <span>Predict against a Model</span>
-                        </div>
                     </div>
                 </div>
                 <div class="hiw-content">
@@ -168,7 +162,7 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
                     </div>
                 </div>
                 <div class="hiw-buttons">
-                    <button class="btn btn--green-bg">GET THE CODE</button>
+                    <a class="btn btn--green-bg" href="/docs">GET THE CODE</a>
                 </div>
             </div>
         </div>
