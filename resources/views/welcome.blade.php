@@ -23,7 +23,7 @@
     <header class="header">
         <div class="header__content header__content--fix-width">
             <div class="header__logo-title">
-                <img style="height: 40px; vertical-align: middle" src="images/logo.png"> HelloAI
+                HelloAI
             </div>
             <nav class="header__menu">
                 <ul>
@@ -344,7 +344,7 @@
             <div class="grid grid--5col">
                 <div class="grid__item grid__item--x2">
                     <h3 class="grid__title grid__title--footer-logo">
-                        <img style="height: 40px; vertical-align: middle" src="images/logo.png"> 
+                        HelloAI
                     </h3>
                     <p class="grid__text grid__text--copyright">Copyright &copy; 2019 HelloAI a product of <a href="https://lynndigital.com">Lynn Digital LLC</a> and <a href="https://hellosoftware.co">HelloSoftware</a>. All Rights Reserved. </p>
                     <ul class="grid__list grid__list--sicons">
