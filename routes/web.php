@@ -28,6 +28,8 @@ Route::group(['middleware' => ['web', 'auth']], function() {
 
 	Route::get('/models/create', 'DashboardController@createModel')->name('models.create');
 	Route::post('/models/create', 'DashboardController@handleCreateModel');
+
+	Route::get('/models/{identifier}/view', 'DashboardController@viewModel')->name('models.view');
 });
 
 \URL::forceScheme('https');

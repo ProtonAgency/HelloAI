@@ -47,4 +47,15 @@ class DashboardController extends Controller
 
 		return redirect()->route('models', ['popup' => 'Model with identifier ' . $ai->identifier . ' created!']);
     }
+
+    public function viewModel(Request $request, string $identifier)
+    {
+    	$ai = ArtificalIntelligence::where('identifier', $identifier)->get()->first();
+    	if($ai === null)
+    	{
+    		return redirect()->back();
+    	}
+
+    	return view('models.view')->with('model', $ai);
+    }
 }

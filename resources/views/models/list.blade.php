@@ -36,8 +36,8 @@
                                     <td>{{ $model->getTextStatus() }}</td>
                                     <td>{{ $model->getAccuracy() }}</td>
                                     <td>
-                                        <a href="">
-                                            <i class="fa fa-cog"></i>
+                                        <a href="{{ route('models.view', ['identifier' => $model->identifier]) }}">
+                                            <i class="fa fa-eye"></i>
                                         </a>
                                     </td>
                                 </tr>
