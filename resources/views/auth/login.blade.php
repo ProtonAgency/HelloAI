@@ -62,6 +62,8 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+
+                                <p>By clicking Login in you agree to our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms of Service</a>.</p>
                             </div>
                         </div>
                     </form>

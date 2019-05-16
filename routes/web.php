@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/privacy', function () {
+    return view('privacy');
+});
+
+Route::get('/terms', function () {
+    return view('legal');
+});
+
 Auth::routes();
 	
 Route::group(['middleware' => ['web', 'auth']], function() {
