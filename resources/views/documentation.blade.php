@@ -111,10 +111,10 @@ $model_train = $client->post('https://ai.hellosoftware.co/api/v1/models/' . $ide
         'Authorization' => 'Bearer ' . $token,
     ],
 ]);
-</pre>
+</pre>                  
+                        </code>
 
                         <b>Example Response:</b>
-
                         <code>
 <pre>
     
