@@ -15,9 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::group(['guard' => 'web'], function() {
+	Auth::routes();
+});
 	
-Route::group(['middleware' => ['web', 'auth']], function() {
+Route::group(['middleware' => ['web', 'auth'], 'guard' => 'web'], function() {
 	Route::get('/logout', 'Auth\LoginController@logout');
 
 	Route::get('/home', function() {
