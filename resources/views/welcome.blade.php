@@ -287,7 +287,7 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
         <div class="section__content section__content--fix-width">
             <div class="grid grid--5col">
                 <div class="grid__item">
-                    <div class="grid__client-logo"><a href="https://1mb.site"><img src="/images/clients/logo1.png" alt="1mbsite" title=""/></a></div>
+                    <div class="grid__client-logo"><a href="https://1mb.site"><img src="/images/clients/logo-1.png" alt="1mbsite" title=""/></a></div>
                 </div>
             </div>
         </div>
