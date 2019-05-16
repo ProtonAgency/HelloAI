@@ -189,12 +189,6 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
                 Just like our platform our pricing plans were designed to fit any project within any budget! Need something bigger? <a href="mailto:sales@lynndigital.com">contact sales</a>.
             </div>
             <div class="pricing">
-                <div class="pricing__switcher switcher">
-                    <div class="switcher__buttons">
-                        <div class="switcher__button switcher__button--enabled">Monthly</div>
-                        <div class="switcher__border"></div>
-                    </div>
-                </div>
                 <div class="pricing__plan">
                     <h3 class="pricing__title">FREE</h3>
                     <div class="pricing__values">
@@ -207,9 +201,7 @@ $client->post('https://ai.hellosoftware.co/api/v1/models/' . $identifier . '/tra
                     </ul>
                     <a class="pricing__signup" href="{{ route('register', ['plan' => 'free']) }}">Sign up</a>
                 </div>
-                <div class="pricing__plan--popular">
-                    <div class="pricing__badge-bg"></div>
-                    <div class="pricing__badge-text">POPULAR</div>
+                <div class="pricing__plan">
                     <h3 class="pricing__title">STARTER</h3>
                     <div class="pricing__values">
                         <div class="pricing__value pricing__value--show"><span>$</span>14 <b>/ month</b></div>
