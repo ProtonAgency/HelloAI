@@ -13,14 +13,14 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['middleware' => 'api', 'prefix' => 'auth'], function() {
+Route::group(['middleware' => 'api', 'prefix' => 'auth', 'guard' => 'api'], function() {
     Route::post('login', 'AuthController@login');
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');
 });
 
-Route::group(['middleware' => 'auth.jwt', 'prefix' => 'v1'], function() {
+Route::group(['middleware' => 'auth.jwt', 'prefix' => 'v1', 'guard' => 'api'], function() {
 	// model routes
 	Route::post('models/new', 'V1\ApiController@createModel');
 	Route::get('models/list', 'V1\ApiController@listModels');
