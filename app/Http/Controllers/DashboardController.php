@@ -19,7 +19,7 @@ class DashboardController extends Controller
 
     public function createModel()
     {
-    	return view('model.create');
+    	return view('models.create');
     }
 
     public function handleCreateModel(Request $request)
