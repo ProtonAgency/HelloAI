@@ -193,7 +193,7 @@ class ApiController extends \App\Http\Controllers\Controller {
 	{
 		// todo: allow file uploads
 		$validator = Validator::make($request->all(), [
-			// 'dataset' => 'required_without:sftp|array_or_file|bail',
+			'dataset' => 'required_without:sftp|array|bail',
 			'sftp.host' => [
 				'required',
 				new Host,
