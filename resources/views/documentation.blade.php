@@ -15,12 +15,13 @@
                     <h3>Authentication</h3>
 
                     <p>
-                        
+                        HelloAI uses JWT (JSON Web Token) based authentication. You can create an account, login, and fetch your account details via the API.
                     </p>
 
                     <h4>Login</h4>
                     <p>
                         <b>Endpoint:</b> <code>/auth/login</code>
+
                         <b>Example Request:</b>
 
                         <code>
@@ -39,6 +40,7 @@ $auth_request = $client->post('https://ai.hellosoftware.co/api/auth/login', [
                         </code>
 
                         <b>Example Response:</b>
+                        
                         <code>
 <pre>
 {
