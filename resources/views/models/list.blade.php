@@ -32,9 +32,7 @@
                                     <td>
                                         <code>{{ $model->identifier }}</code>
                                     </td>
-                                    <td>
-                                        <!-- todo -->
-                                    </td>
+                                    <td>{{ $model->getTextStatus() }}</td>
                                     <td>
                                         <a href="">
                                             <i class="fa fa-cog"></i>

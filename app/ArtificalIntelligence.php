@@ -45,6 +45,16 @@ class ArtificalIntelligence extends Model
 
     public function getTextStatus()
     {
+        $latest_train = $this->trainresults()->orderBy('created_at', 'desc')->first();
 
+        $training = $latest_train === null ? false : ($latest_train->index === $latest_train->of);
+        if($training)
+        {
+            return 'Training';
+        }
+        else
+        {
+            return 'Idle';
+        }
     }
 }
